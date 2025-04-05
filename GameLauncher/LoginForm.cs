@@ -16,5 +16,12 @@ namespace GameLauncher
         {
             InitializeComponent();
         }
+
+
+
+        private void ButtonCloseReact(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

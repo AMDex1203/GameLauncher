@@ -34,7 +34,7 @@
             // STR_CHECK
             // 
             this.STR_CHECK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.STR_CHECK.Location = new System.Drawing.Point(0, 15);
+            this.STR_CHECK.Location = new System.Drawing.Point(0, 14);
             this.STR_CHECK.Name = "STR_CHECK";
             this.STR_CHECK.Size = new System.Drawing.Size(400, 20);
             this.STR_CHECK.TabIndex = 0;
@@ -53,6 +53,7 @@
             this.Name = "CheckForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckForm";
+            this.Load += new System.EventHandler(this.GetInfoSystem);
             this.ResumeLayout(false);
 
         }

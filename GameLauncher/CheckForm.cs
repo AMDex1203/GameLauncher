@@ -17,12 +17,23 @@ namespace GameLauncher
         public CheckForm()
         {
             InitializeComponent();
-            GetInfoSystem();
         }
 
-        private async void GetInfoSystem()
+        private async void GetInfoSystem(object sender, EventArgs e)
         {
-            STR_CHECK.Text = InternalLauncher.InternalSTRING.STR_LOADING;
+            await Task.Run(async () =>
+            {
+                STR_CHECK.Text = InternalLauncher.InternalSTRING.STR_LOADING;
+                await Task.Delay(1000);
+                STR_CHECK.Text = InternalLauncher.InternalSTRING.STR_GET_SUPPORT_FILE;
+                await Task.Delay(1000);
+            });
+            /*LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide(); // atau this.Close();*/
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
         }
 
 

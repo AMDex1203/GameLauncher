@@ -28,27 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.components = new System.ComponentModel.Container();
+            this.MainFormSide = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.CLOSEBUTTON = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
-            // ProgressBar1
+            // MainFormSide
             // 
-            this.ProgressBar1.Location = new System.Drawing.Point(12, 484);
-            this.ProgressBar1.Name = "ProgressBar1";
-            this.ProgressBar1.Size = new System.Drawing.Size(400, 10);
-            this.ProgressBar1.TabIndex = 0;
-            this.ProgressBar1.Text = "guna2ProgressBar1";
-            this.ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.MainFormSide.BorderRadius = 10;
+            this.MainFormSide.TargetControl = this;
             // 
-            // guna2ProgressBar1
+            // CLOSEBUTTON
             // 
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(12, 441);
-            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(400, 10);
-            this.guna2ProgressBar1.TabIndex = 1;
-            this.guna2ProgressBar1.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.CLOSEBUTTON.BackgroundImage = global::GameLauncher.Properties.Resources.close_offpoint;
+            this.CLOSEBUTTON.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CLOSEBUTTON.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.CLOSEBUTTON.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CLOSEBUTTON.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CLOSEBUTTON.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CLOSEBUTTON.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CLOSEBUTTON.FillColor = System.Drawing.Color.Transparent;
+            this.CLOSEBUTTON.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CLOSEBUTTON.ForeColor = System.Drawing.Color.White;
+            this.CLOSEBUTTON.Location = new System.Drawing.Point(1003, 3);
+            this.CLOSEBUTTON.Name = "CLOSEBUTTON";
+            this.CLOSEBUTTON.Size = new System.Drawing.Size(30, 30);
+            this.CLOSEBUTTON.TabIndex = 0;
+            this.CLOSEBUTTON.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.CLOSEBUTTON.Click += new System.EventHandler(this.ButtonCloseReact);
             // 
             // MainForm
             // 
@@ -56,9 +63,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(845, 515);
-            this.Controls.Add(this.guna2ProgressBar1);
-            this.Controls.Add(this.ProgressBar1);
+            this.ClientSize = new System.Drawing.Size(1045, 715);
+            this.Controls.Add(this.CLOSEBUTTON);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -68,8 +74,7 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2ProgressBar ProgressBar1;
-        private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
+        private Guna.UI2.WinForms.Guna2Elipse MainFormSide;
+        private Guna.UI2.WinForms.Guna2Button CLOSEBUTTON;
     }
 }

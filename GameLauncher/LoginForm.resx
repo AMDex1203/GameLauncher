@@ -117,4 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="GunaElclipseLoginForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="InputUsername.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAAgtJREFUaEPtmb1KHFEYhhcFFbuonRZBkjQiIhhTKGkTxKAY1AvQS1CwtlLiNZjG
+        n6CNAbvcQhBLE9RabFIYxT9cn8/zWqq7OyfnHMN54IFhd877vcvODjszpUwmk6mJcrncgJO4hnv4V9q2
+        vTaBDdo9TSj4GQ/wKfZxTMvSgVL1uGQNq+QL1ikmPpSp5UPcs6iYuFDEDqeijCouDhSwH7Yd70U5xHgn
+        AIbb2ckX44oND8PXXQcvrCg2PAz/7Tp4YU+x4WH4ievghRPFhkcFvKHY8DD7xlXwwo1iw8PwY9fBC0eK
+        DQ/Dd1wHL/xUbHgYbv+VfLGg2PAw/J3r4IW3io0DBbZdj0JsKS4elHiNf+7q1IatfaW4uFDkI15Yqyo5
+        xw+KSQMKDeKRtasQ23dAy9OCYi1oF1mn+BD2np3tXmhZulCyGUdxHr/isrZHsFm7ZTKZ5w4/6Cbsxvf4
+        Sdq2vdao3dKDcp04jXZL9Bde40PYe7bPKk7hS8XEgQIdOIu7WBS7HJjBdsX/exjWj9/wCn1jmXZnpk/j
+        /EP4G9zAUPzALo0vDmF1OIeXGBr7I2qHb7Eb3QQ0oo/rjaJ8x9rPdizevItJgw3Vqg4W9rr1SdGjepXD
+        omG3NimGVK9yWNSGj11XhMaeQ7aqXnWw0B4bnFlKZKxDsccOBNg3Y4fZeCRtdpvqZDKZzH9BqXQLH3Om
+        V7b/wyUAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
