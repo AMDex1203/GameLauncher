@@ -120,11 +120,14 @@
   <metadata name="GunaElclipseLoginForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>59</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="InputUsername.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAgtJREFUaEPtmb1KHFEYhhcFFbuonRZBkjQiIhhTKGkTxKAY1AvQS1CwtlLiNZjG
+        DAAACwwBP0AiyAAAAgtJREFUaEPtmb1KHFEYhhcFFbuonRZBkjQiIhhTKGkTxKAY1AvQS1CwtlLiNZjG
         n6CNAbvcQhBLE9RabFIYxT9cn8/zWqq7OyfnHMN54IFhd877vcvODjszpUwmk6mJcrncgJO4hnv4V9q2
         vTaBDdo9TSj4GQ/wKfZxTMvSgVL1uGQNq+QL1ikmPpSp5UPcs6iYuFDEDqeijCouDhSwH7Yd70U5xHgn
         AIbb2ckX44oND8PXXQcvrCg2PAz/7Tp4YU+x4WH4ievghRPFhkcFvKHY8DD7xlXwwo1iw8PwY9fBC0eK

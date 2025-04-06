@@ -23,5 +23,22 @@ namespace GameLauncher
         {
             Application.Exit();
         }
+
+        private void InputUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            string username = InputUsername.Text;
+            string password = InputPassword.Text;
+            MessageBox.Show("Username : " + username + "\nPassword : " + password);
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
