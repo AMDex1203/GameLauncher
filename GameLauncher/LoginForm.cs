@@ -17,7 +17,10 @@ namespace GameLauncher
             InitializeComponent();
         }
 
-
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            FadeInForm.Start();
+        }
 
         private void ButtonCloseReact(object sender, EventArgs e)
         {
@@ -31,14 +34,23 @@ namespace GameLauncher
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            string username = InputUsername.Text;
-            string password = InputPassword.Text;
-            MessageBox.Show("Username : " + username + "\nPassword : " + password);
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+            this.Close();
         }
 
         private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void FadeinForm(object sender, EventArgs e)
+        {
+            Opacity += .2;
         }
     }
 }

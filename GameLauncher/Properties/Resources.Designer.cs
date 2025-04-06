@@ -63,6 +63,16 @@ namespace GameLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banner_launcher {
+            get {
+                object obj = ResourceManager.GetObject("banner_launcher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bg_Main {
             get {
                 object obj = ResourceManager.GetObject("Bg_Main", resourceCulture);
@@ -113,6 +123,16 @@ namespace GameLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap message_icon {
+            get {
+                object obj = ResourceManager.GetObject("message_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pass_icon {
             get {
                 object obj = ResourceManager.GetObject("pass_icon", resourceCulture);
@@ -126,6 +146,26 @@ namespace GameLauncher.Properties {
         internal static System.Drawing.Bitmap pass_icon_2 {
             get {
                 object obj = ResourceManager.GetObject("pass_icon_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setting_icon {
+            get {
+                object obj = ResourceManager.GetObject("setting_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap update_icon {
+            get {
+                object obj = ResourceManager.GetObject("update_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
