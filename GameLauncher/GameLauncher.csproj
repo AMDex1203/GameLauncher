@@ -121,6 +121,12 @@
     <Compile Include="Strings\GetString.cs" />
     <Compile Include="Strings\LanguageString\EnglishString.cs" />
     <Compile Include="Strings\LanguageString\IndonesiaString.cs" />
+    <Compile Include="VerificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerificationForm.Designer.cs">
+      <DependentUpon>VerificationForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CheckForm.resx">
       <DependentUpon>CheckForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +146,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VerificationForm.resx">
+      <DependentUpon>VerificationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -185,6 +194,9 @@
     <None Include="Resources\icons8-key-50 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-high-priority-message-30.png" />
+    <None Include="Resources\icons8-download-50 %281%29.png" />
+    <None Include="Resources\icons8-download-50.png" />
     <None Include="Resources\icons8-chat-message-50.png" />
     <None Include="Resources\icons8-gear-50.png" />
     <None Include="Resources\icons8-installing-updates-50.png" />

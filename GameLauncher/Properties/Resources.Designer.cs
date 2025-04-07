@@ -103,6 +103,26 @@ namespace GameLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download_offpoint {
+            get {
+                object obj = ResourceManager.GetObject("download_offpoint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_onpoint {
+            get {
+                object obj = ResourceManager.GetObject("download_onpoint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_type1 {
             get {
                 object obj = ResourceManager.GetObject("logo_type1", resourceCulture);
@@ -156,6 +176,16 @@ namespace GameLauncher.Properties {
         internal static System.Drawing.Bitmap setting_icon {
             get {
                 object obj = ResourceManager.GetObject("setting_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap update_allert {
+            get {
+                object obj = ResourceManager.GetObject("update_allert", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -41,12 +41,17 @@
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.FadeInForm = new System.Windows.Forms.Timer(this.components);
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.LoginName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.UpdateAllert = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.InputPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.InputUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateAllert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GunaElclipseLoginForm
@@ -58,27 +63,30 @@
             // 
             this.guna2CheckBox1.Animated = true;
             this.guna2CheckBox1.AutoSize = true;
+            this.guna2CheckBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.CheckedState.BorderRadius = 5;
             this.guna2CheckBox1.CheckedState.BorderThickness = 0;
             this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.Red;
             this.guna2CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2CheckBox1.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.guna2CheckBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2CheckBox1.Location = new System.Drawing.Point(445, 335);
+            this.guna2CheckBox1.Location = new System.Drawing.Point(26, 325);
             this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(162, 22);
+            this.guna2CheckBox1.Size = new System.Drawing.Size(122, 22);
             this.guna2CheckBox1.TabIndex = 4;
-            this.guna2CheckBox1.Text = "Remember Username";
+            this.guna2CheckBox1.Text = "Save Username";
             this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.UncheckedState.BorderRadius = 5;
             this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
             this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.Red;
             this.guna2CheckBox1.CheckedChanged += new System.EventHandler(this.guna2CheckBox1_CheckedChanged);
             // 
             // LoginButton_Click
             // 
-            this.LoginButton_Click.BorderRadius = 10;
+            this.LoginButton_Click.Animated = true;
+            this.LoginButton_Click.AutoRoundedCorners = true;
+            this.LoginButton_Click.BorderRadius = 17;
             this.LoginButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton_Click.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.LoginButton_Click.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -90,7 +98,7 @@
             this.LoginButton_Click.Font = new System.Drawing.Font("Calibri", 12F);
             this.LoginButton_Click.ForeColor = System.Drawing.Color.White;
             this.LoginButton_Click.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.LoginButton_Click.Location = new System.Drawing.Point(445, 371);
+            this.LoginButton_Click.Location = new System.Drawing.Point(26, 361);
             this.LoginButton_Click.Name = "LoginButton_Click";
             this.LoginButton_Click.PressedColor = System.Drawing.Color.White;
             this.LoginButton_Click.PressedDepth = 40;
@@ -139,9 +147,9 @@
             this.RegisterButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterButton.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.RegisterButton.LinkColor = System.Drawing.Color.Red;
-            this.RegisterButton.Location = new System.Drawing.Point(442, 419);
+            this.RegisterButton.Location = new System.Drawing.Point(23, 409);
             this.RegisterButton.Name = "RegisterButton";
-            this.RegisterButton.Size = new System.Drawing.Size(100, 23);
+            this.RegisterButton.Size = new System.Drawing.Size(100, 33);
             this.RegisterButton.TabIndex = 8;
             this.RegisterButton.TabStop = true;
             this.RegisterButton.Text = "Register Here";
@@ -157,9 +165,9 @@
             this.ForgotPasswordLink.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForgotPasswordLink.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.ForgotPasswordLink.LinkColor = System.Drawing.Color.Red;
-            this.ForgotPasswordLink.Location = new System.Drawing.Point(539, 419);
+            this.ForgotPasswordLink.Location = new System.Drawing.Point(120, 409);
             this.ForgotPasswordLink.Name = "ForgotPasswordLink";
-            this.ForgotPasswordLink.Size = new System.Drawing.Size(140, 23);
+            this.ForgotPasswordLink.Size = new System.Drawing.Size(140, 33);
             this.ForgotPasswordLink.TabIndex = 9;
             this.ForgotPasswordLink.TabStop = true;
             this.ForgotPasswordLink.Text = "Forgot My Password";
@@ -194,31 +202,45 @@
             this.FadeInForm.Enabled = true;
             this.FadeInForm.Tick += new System.EventHandler(this.FadeinForm);
             // 
-            // guna2ImageButton1
+            // LoginName
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton1.Image = global::GameLauncher.Properties.Resources.update_icon;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(720, 473);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton1.TabIndex = 11;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            this.LoginName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoginName.AutoSize = false;
+            this.LoginName.BackColor = System.Drawing.Color.Transparent;
+            this.LoginName.Font = new System.Drawing.Font("Bebas Neue", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginName.ForeColor = System.Drawing.Color.Red;
+            this.LoginName.Location = new System.Drawing.Point(0, 157);
+            this.LoginName.Name = "LoginName";
+            this.LoginName.Size = new System.Drawing.Size(283, 37);
+            this.LoginName.TabIndex = 12;
+            this.LoginName.Text = "Log in";
+            this.LoginName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoginName.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // UpdateAllert
+            // 
+            this.UpdateAllert.FillColor = System.Drawing.Color.Transparent;
+            this.UpdateAllert.Image = ((System.Drawing.Image)(resources.GetObject("UpdateAllert.Image")));
+            this.UpdateAllert.ImageRotate = 0F;
+            this.UpdateAllert.Location = new System.Drawing.Point(720, 437);
+            this.UpdateAllert.Name = "UpdateAllert";
+            this.UpdateAllert.Size = new System.Drawing.Size(30, 30);
+            this.UpdateAllert.TabIndex = 13;
+            this.UpdateAllert.TabStop = false;
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.BackgroundImage = global::GameLauncher.Properties.Resources.logo_type1;
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::GameLauncher.Properties.Resources.logo_type1;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(469, 55);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(184, 141);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(280, 141);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
             // 
@@ -238,8 +260,9 @@
             this.InputPassword.ForeColor = System.Drawing.Color.White;
             this.InputPassword.HoverState.BorderColor = System.Drawing.Color.Red;
             this.InputPassword.IconLeft = global::GameLauncher.Properties.Resources.pass_icon_2;
-            this.InputPassword.Location = new System.Drawing.Point(445, 289);
+            this.InputPassword.Location = new System.Drawing.Point(26, 279);
             this.InputPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InputPassword.MaxLength = 12;
             this.InputPassword.Name = "InputPassword";
             this.InputPassword.PasswordChar = '●';
             this.InputPassword.PlaceholderForeColor = System.Drawing.Color.White;
@@ -267,8 +290,9 @@
             this.InputUsername.ForeColor = System.Drawing.Color.White;
             this.InputUsername.HoverState.BorderColor = System.Drawing.Color.Red;
             this.InputUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("InputUsername.IconLeft")));
-            this.InputUsername.Location = new System.Drawing.Point(445, 231);
+            this.InputUsername.Location = new System.Drawing.Point(26, 221);
             this.InputUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InputUsername.MaxLength = 12;
             this.InputUsername.Name = "InputUsername";
             this.InputUsername.PasswordChar = '\0';
             this.InputUsername.PlaceholderForeColor = System.Drawing.Color.White;
@@ -280,23 +304,53 @@
             this.InputUsername.TextOffset = new System.Drawing.Point(5, 0);
             this.InputUsername.TextChanged += new System.EventHandler(this.InputUsername_TextChanged);
             // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.Image = global::GameLauncher.Properties.Resources.download_onpoint;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton1.Image = global::GameLauncher.Properties.Resources.download_offpoint;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(709, 473);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton1.TabIndex = 11;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Controls.Add(this.InputUsername);
+            this.guna2Panel1.Controls.Add(this.LoginName);
+            this.guna2Panel1.Controls.Add(this.InputPassword);
+            this.guna2Panel1.Controls.Add(this.guna2CheckBox1);
+            this.guna2Panel1.Controls.Add(this.LoginButton_Click);
+            this.guna2Panel1.Controls.Add(this.ForgotPasswordLink);
+            this.guna2Panel1.Controls.Add(this.RegisterButton);
+            this.guna2Panel1.Location = new System.Drawing.Point(398, 45);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.Red;
+            this.guna2Panel1.ShadowDecoration.Enabled = true;
+            this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 10, 10, 10);
+            this.guna2Panel1.Size = new System.Drawing.Size(283, 458);
+            this.guna2Panel1.TabIndex = 14;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(762, 515);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.UpdateAllert);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.ForgotPasswordLink);
-            this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.MinimizeButton);
             this.Controls.Add(this.CloseButton);
-            this.Controls.Add(this.LoginButton_Click);
-            this.Controls.Add(this.guna2CheckBox1);
-            this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.InputPassword);
-            this.Controls.Add(this.InputUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.Opacity = 0D;
@@ -304,9 +358,11 @@
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateAllert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -323,9 +379,12 @@
         private System.Windows.Forms.LinkLabel RegisterButton;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.LinkLabel ForgotPasswordLink;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private System.Windows.Forms.Timer FadeInForm;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LoginName;
+        private Guna.UI2.WinForms.Guna2PictureBox UpdateAllert;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

@@ -19,6 +19,7 @@ namespace GameLauncher
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            UpdateAllert.Visible = false;
             FadeInForm.Start();
         }
 
@@ -34,8 +35,8 @@ namespace GameLauncher
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            VerificationForm verificationForm = new VerificationForm();
+            verificationForm.Show();
             this.Close();
         }
 

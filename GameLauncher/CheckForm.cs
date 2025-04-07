@@ -27,6 +27,8 @@ namespace GameLauncher
                 await Task.Delay(1000);
                 STR_CHECK.Text = InternalLauncher.InternalSTRING.STR_GET_SUPPORT_FILE;
                 await Task.Delay(1000);
+                STR_CHECK.Text = InternalLauncher.InternalSTRING.STR_SUCCESS_CHECK;
+                await Task.Delay(1000);
             });
             /*LoginForm loginForm = new LoginForm();
             loginForm.Show();
@@ -35,9 +37,6 @@ namespace GameLauncher
             loginForm.Show();
             this.Hide();
         }
-
-
-
         private static void GetInfoHost()
         {
             

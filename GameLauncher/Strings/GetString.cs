@@ -11,5 +11,6 @@ namespace GameLauncher.Strings
         string STR_LOADING {  get; set; }
         string STR_DLL_JSON_NULL { get; set; }
         string STR_GET_SUPPORT_FILE { get; set; }
+        string STR_SUCCESS_CHECK { get; set; }
     }
 }

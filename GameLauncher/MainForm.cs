@@ -22,20 +22,26 @@ namespace GameLauncher
             FadeInMainForm.Start();
 
             Hide_Panel();
+
+            Home_Panel.Show();
         }
         private void Hide_Panel()
         {
+            Home_Panel.Hide();
             GameList_Panel.Hide();
         }
 
         private void GameListButton_Click(object sender, EventArgs e)
         {
+            Hide_Panel();
             GameList_Panel.Show();
         }
         private void HomeButton_Click(Object sender, EventArgs e)
         {
             Hide_Panel();
             Home_Panel.Show();
+            IsiPesanProject.Show();
+
         }
         private void ButtonCloseReact(object sender, EventArgs e)
         {
@@ -44,6 +50,29 @@ namespace GameLauncher
         private void FadeinMainForm(object sender, EventArgs e)
         {
             Opacity += .2;
+        }
+
+        private int imagecount = 1;
+        private void ImageChangerSetting()
+        {
+            if (imagecount == 10)
+            {
+                imagecount = 1;
+            }
+            ImageChange_Box.ImageLocation = string.Format(@"Images\{0}.bmp", imagecount);
+            imagecount++;
+        }
+
+        private void ImageChager_Timer(object sender, EventArgs e)
+        {
+            ImageChangerSetting();
+        }
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,26 +91,6 @@ namespace GameLauncher
         }
 
         private void guna2GradientButton4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2GradientButton1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
 
         }
