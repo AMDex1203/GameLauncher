@@ -1,9 +1,11 @@
-﻿using System;
+﻿using GameLauncher.Side.Log;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,12 +42,6 @@ namespace GameLauncher
         {
             Hide_Panel();
             Home_Panel.Show();
-            IsiPesanProject.Show();
-
-        }
-        private void ButtonCloseReact(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
         private void FadeinMainForm(object sender, EventArgs e)
         {

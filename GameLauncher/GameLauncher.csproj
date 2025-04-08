@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Bytehide.Shield.Integration.2.5.0.3\build\Bytehide.Shield.Integration.props" Condition="Exists('..\packages\Bytehide.Shield.Integration.2.5.0.3\build\Bytehide.Shield.Integration.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,15 +35,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Launcher_Core">
+      <HintPath>..\Launcher_Core\bin\Debug\net8.0\Launcher_Core.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>Required\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.CodeDom, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.CodeDom.9.0.2\lib\net462\System.CodeDom.dll</HintPath>
+    <Reference Include="System.CodeDom, Version=9.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.9.0.3\lib\net462\System.CodeDom.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -60,13 +65,13 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
@@ -80,8 +85,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
@@ -117,7 +122,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Side\Data\GetPublicIpAddress.cs" />
+    <Compile Include="Side\Data\GetRegionClient.cs" />
+    <Compile Include="Side\Host\Connections.cs" />
+    <Compile Include="Side\Host\Database.cs" />
+    <Compile Include="Side\Host\HostStatus.cs" />
     <Compile Include="Side\Log\Logger.cs" />
+    <Compile Include="Side\Secure\GetBanInfo.cs" />
     <Compile Include="Strings\GetString.cs" />
     <Compile Include="Strings\LanguageString\EnglishString.cs" />
     <Compile Include="Strings\LanguageString\IndonesiaString.cs" />
@@ -194,6 +205,9 @@
     <None Include="Resources\icons8-key-50 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-hint-50.png" />
+    <None Include="Resources\icons8-bot-50.png" />
+    <None Include="Resources\icons8-email-50.png" />
     <None Include="Resources\icons8-high-priority-message-30.png" />
     <None Include="Resources\icons8-download-50 %281%29.png" />
     <None Include="Resources\icons8-download-50.png" />
@@ -206,10 +220,4 @@
     <None Include="Resources\Sale.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Bytehide.Shield.Integration.2.5.0.3\build\Bytehide.Shield.Integration.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Bytehide.Shield.Integration.2.5.0.3\build\Bytehide.Shield.Integration.props'))" />
-  </Target>
 </Project>

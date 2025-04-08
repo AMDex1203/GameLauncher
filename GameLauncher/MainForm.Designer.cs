@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainFormSide = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.CloseButton = new Guna.UI2.WinForms.Guna2ControlBox();
             this.FadeInMainForm = new System.Windows.Forms.Timer(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -68,24 +67,6 @@
             this.MainFormSide.BorderRadius = 10;
             this.MainFormSide.TargetControl = this;
             // 
-            // CloseButton
-            // 
-            this.CloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CloseButton.BackColor = System.Drawing.Color.Transparent;
-            this.CloseButton.BorderColor = System.Drawing.Color.Transparent;
-            this.CloseButton.BorderRadius = 5;
-            this.CloseButton.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
-            this.CloseButton.CustomIconSize = 15F;
-            this.CloseButton.FillColor = System.Drawing.Color.Transparent;
-            this.CloseButton.IconColor = System.Drawing.Color.White;
-            this.CloseButton.Location = new System.Drawing.Point(1005, 5);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.PressedColor = System.Drawing.Color.White;
-            this.CloseButton.Size = new System.Drawing.Size(30, 30);
-            this.CloseButton.TabIndex = 0;
-            this.CloseButton.UseTransparentBackground = true;
-            this.CloseButton.Click += new System.EventHandler(this.ButtonCloseReact);
-            // 
             // FadeInMainForm
             // 
             this.FadeInMainForm.Enabled = true;
@@ -119,7 +100,7 @@
             this.guna2ControlBox1.CustomIconSize = 15F;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(969, 5);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1003, 7);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.PressedColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Size = new System.Drawing.Size(30, 30);
@@ -335,7 +316,7 @@
             this.LogOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.LogOutButton.FillColor = System.Drawing.Color.Black;
             this.LogOutButton.FillColor2 = System.Drawing.Color.Red;
-            this.LogOutButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.LogOutButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.ForeColor = System.Drawing.Color.White;
             this.LogOutButton.Image = ((System.Drawing.Image)(resources.GetObject("LogOutButton.Image")));
             this.LogOutButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -396,7 +377,7 @@
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(184, 45);
             this.HomeButton.TabIndex = 4;
-            this.HomeButton.Text = "HOME";
+            this.HomeButton.Text = "ABOUT PROJECT";
             this.HomeButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.HomeButton.TextOffset = new System.Drawing.Point(5, 0);
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
@@ -506,7 +487,6 @@
             this.Controls.Add(this.AccountCenterButton);
             this.Controls.Add(this.ListGameButton);
             this.Controls.Add(this.TOPUPButton);
-            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.GameList_Panel);
@@ -529,7 +509,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Elipse MainFormSide;
-        private Guna.UI2.WinForms.Guna2ControlBox CloseButton;
         private System.Windows.Forms.Timer FadeInMainForm;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

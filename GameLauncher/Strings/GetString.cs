@@ -12,5 +12,9 @@ namespace GameLauncher.Strings
         string STR_DLL_JSON_NULL { get; set; }
         string STR_GET_SUPPORT_FILE { get; set; }
         string STR_SUCCESS_CHECK { get; set; }
+        string STR_ALREADY_GAME {  get; set; }
+        string STR_MAINTENANCE { get; set; }
+        string STR_CONNECTION_BROKEN { get; set; }
+        string STR_NULL_CONNECTION { get; set; }
     }
 }

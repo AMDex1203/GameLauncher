@@ -19,10 +19,22 @@ namespace GameLauncher
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            Register_Panel.Hide();
             UpdateAllert.Visible = false;
             FadeInForm.Start();
-        }
+            RandomCodeNumber();
 
+        }
+        private void RegisterText_Click(object sender, EventArgs e)
+        {
+            Login_Panel.Hide();
+            Register_Panel.Show();
+        }
+        private void RegisterClose_Click(object sender, EventArgs e)
+        {
+            Register_Panel.Hide();
+            Login_Panel.Show();
+        }
         private void ButtonCloseReact(object sender, EventArgs e)
         {
             Application.Exit();
@@ -52,6 +64,17 @@ namespace GameLauncher
         private void FadeinForm(object sender, EventArgs e)
         {
             Opacity += .2;
+        }
+        private void RandomCodeNumber()
+        {
+            Random random = new Random();
+            string chars = "0123456789";
+            string code = "";
+            for (int i = 0; i < 6; i++)
+            {
+                code += chars[random.Next(0, chars.Length)];
+            }
+            STR_RANDOM.Text = code;
         }
     }
 }
