@@ -19,5 +19,19 @@ namespace GameLauncher.Strings.LanguageString
         public string STR_CHECK_CONNECTION { get; set; } = "Memeriksa Koneksi...";
         public string STR_MSG_MAINTENANCE { get; set; } = "Server Saat Ini Sedang Dalam Maintenance\nSilahkan Coba Lagi Nanti";
         public string STR_SAVE_SETTING { get; set; } = "Pengaturan Telah Tersimpan";
+        public string STR_MINIMIZE_CHECK { get; set; } = "Minimize Program Saat Game Dimulai";
+        public string STR_LOGIN_NAME { get; set; } = "Masuk";
+        public string STR_REGISTER_NAME { get; set; } = "Daftar";
+        public string STR_REGISTER_TEXT { get; set; } = "Daftar Disini";
+        public string STR_FORGOT_PASS { get; set; } = "Lupa Password?";
+
+        //=============== String Main Form =============
+
+        public string STR_ABOUT_BUTTON { get; set; } = "TENTANG KAMI";
+        public string STR_GAMELIST_BUTTON { get; set; } = "DAFTAR GAME";
+        public string STR_ITEM_SHOP { get; set; } = "TOKO ITEM";
+        public string STR_TOPUP_CENTER { get; set; } = "PUSAT TOPUP";
+        public string STR_ACCOUNT_CENTER { get; set; } = "AKUN SAYA";
+        public string STR_SETTING_BUTTON { get; set; } = "PENGATURAN";
     }
 }

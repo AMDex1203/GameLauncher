@@ -21,11 +21,21 @@ namespace GameLauncher
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            STRINGView();
             FadeInMainForm.Start();
 
             Hide_Panel();
 
             Home_Panel.Show();
+        }
+        private void STRINGView()
+        {
+            HomeButton.Text = InternalLauncher.InternalSTRING.STR_ABOUT_BUTTON;
+            ListGameButton.Text = InternalLauncher.InternalSTRING.STR_GAMELIST_BUTTON;
+            ItemShopButton.Text = InternalLauncher.InternalSTRING.STR_ITEM_SHOP;
+            TOPUPButton.Text = InternalLauncher.InternalSTRING.STR_TOPUP_CENTER;
+            AccountCenterButton.Text = InternalLauncher.InternalSTRING.STR_ACCOUNT_CENTER;
+            SettingButton.Text = InternalLauncher.InternalSTRING.STR_SETTING_BUTTON;
         }
         private void Hide_Panel()
         {

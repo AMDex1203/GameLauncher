@@ -19,5 +19,16 @@ namespace GameLauncher.Strings
         string STR_CHECK_CONNECTION { get; set; }
         string STR_MSG_MAINTENANCE { get; set; }
         string STR_SAVE_SETTING { get; set; }
+        string STR_MINIMIZE_CHECK { get; set; }
+        string STR_LOGIN_NAME { get; set; }
+        string STR_REGISTER_NAME { get; set; }
+        string STR_REGISTER_TEXT { get; set; }
+        string STR_FORGOT_PASS { get; set; }
+        string STR_ABOUT_BUTTON { get; set; }
+        string STR_GAMELIST_BUTTON { get; set; }
+        string STR_ITEM_SHOP { get; set; }
+        string STR_TOPUP_CENTER { get; set; }
+        string STR_ACCOUNT_CENTER { get; set; }
+        string STR_SETTING_BUTTON { get; set; }
     }
 }

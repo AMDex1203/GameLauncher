@@ -22,6 +22,11 @@ namespace GameLauncher
         private void SettingForm_Load(object sender, EventArgs e)
         {
             GetStringInfoVersion();
+            STRINGView();
+        }
+        private void STRINGView()
+        {
+            MinimizeStatus.Text = InternalLauncher.InternalSTRING.STR_MINIMIZE_CHECK;
         }
         string password = "your_password"; // Ganti dengan password yang Anda inginkan
         private void GetLanguageSetting()

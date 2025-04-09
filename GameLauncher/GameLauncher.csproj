@@ -106,6 +106,7 @@
     <Compile Include="SettingForm.Designer.cs">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Side\Data\GetInfoClient.cs" />
     <Compile Include="Side\Data\GetPublicIpAddress.cs" />
     <Compile Include="Side\Data\GetRegionClient.cs" />
     <Compile Include="Side\Host\Connections.cs" />
