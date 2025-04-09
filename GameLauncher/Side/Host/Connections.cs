@@ -1,5 +1,4 @@
 ﻿using GameLauncher.Side.Log;
-using Launcher_Core.Support;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -39,7 +38,7 @@ namespace GameLauncher.Side.Host
                             switch (id)
                             {
                                 case "launcherversion":
-                                    LauncherVersion = Core.Conf(line, id);
+                                    LauncherVersion = Config.Conf(line, id);
                                     break;
                             }
                         }
@@ -70,7 +69,7 @@ namespace GameLauncher.Side.Host
                             switch (id)
                             {
                                 case "clientversion":
-                                    ClientVersion = int.Parse(Core.Conf(line, id));
+                                    ClientVersion = int.Parse(Config.Conf(line, id));
                                     return ClientVersion;
 
                             }

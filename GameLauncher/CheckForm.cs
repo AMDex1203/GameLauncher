@@ -34,7 +34,8 @@ namespace GameLauncher
                 STR_CHECK.Text = InternalLauncher.InternalSTRING.STR_LOADING;
                 await Task.Delay(1000);
                 GetBanInfo.ValidateDevice();
-                //Status(await Connections.GetHostInfo());
+                STR_CHECK.Text = InternalLauncher.InternalSTRING.STR_CHECK_CONNECTION;
+                await Task.Delay(1000);
                 this.Hide();
                 LoginForm loginForm = new LoginForm();
                 loginForm.Show();

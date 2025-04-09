@@ -16,5 +16,6 @@ namespace GameLauncher.Strings
         string STR_MAINTENANCE { get; set; }
         string STR_CONNECTION_BROKEN { get; set; }
         string STR_NULL_CONNECTION { get; set; }
+        string STR_CHECK_CONNECTION { get; set; }
     }
 }
