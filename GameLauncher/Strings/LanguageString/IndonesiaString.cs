@@ -17,5 +17,7 @@ namespace GameLauncher.Strings.LanguageString
         public string STR_CONNECTION_BROKEN { get; set; } = "Gagal Terhubung Ke Server \nKoneksi Server Rusak";
         public string STR_NULL_CONNECTION { get; set; } = "Gagal Terhubung Ke Server \nServer Status Tidak Ditemukan";
         public string STR_CHECK_CONNECTION { get; set; } = "Memeriksa Koneksi...";
+        public string STR_MSG_MAINTENANCE { get; set; } = "Server Saat Ini Sedang Dalam Maintenance\nSilahkan Coba Lagi Nanti";
+        public string STR_SAVE_SETTING { get; set; } = "Pengaturan Telah Tersimpan";
     }
 }

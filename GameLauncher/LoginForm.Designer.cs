@@ -47,6 +47,7 @@
             this.InputUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.InputPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.Register_Panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.STR_RANDOM = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -59,7 +60,7 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.UpdateAllert = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.STR_RANDOM = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BlinkIcon = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.Login_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -345,6 +346,18 @@
             this.Register_Panel.Size = new System.Drawing.Size(283, 458);
             this.Register_Panel.TabIndex = 15;
             // 
+            // STR_RANDOM
+            // 
+            this.STR_RANDOM.AutoSize = false;
+            this.STR_RANDOM.BackColor = System.Drawing.Color.Transparent;
+            this.STR_RANDOM.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STR_RANDOM.ForeColor = System.Drawing.Color.White;
+            this.STR_RANDOM.Location = new System.Drawing.Point(115, 286);
+            this.STR_RANDOM.Name = "STR_RANDOM";
+            this.STR_RANDOM.Size = new System.Drawing.Size(97, 28);
+            this.STR_RANDOM.TabIndex = 26;
+            this.STR_RANDOM.Text = "STR_RANDOM";
+            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.AutoSize = false;
@@ -614,17 +627,10 @@
             this.guna2ImageButton1.TabIndex = 11;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
-            // STR_RANDOM
+            // BlinkIcon
             // 
-            this.STR_RANDOM.AutoSize = false;
-            this.STR_RANDOM.BackColor = System.Drawing.Color.Transparent;
-            this.STR_RANDOM.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STR_RANDOM.ForeColor = System.Drawing.Color.White;
-            this.STR_RANDOM.Location = new System.Drawing.Point(115, 286);
-            this.STR_RANDOM.Name = "STR_RANDOM";
-            this.STR_RANDOM.Size = new System.Drawing.Size(97, 28);
-            this.STR_RANDOM.TabIndex = 26;
-            this.STR_RANDOM.Text = "STR_RANDOM";
+            this.BlinkIcon.Enabled = true;
+            this.BlinkIcon.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // LoginForm
             // 
@@ -637,8 +643,8 @@
             this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.MinimizeButton);
             this.Controls.Add(this.CloseButton);
-            this.Controls.Add(this.Register_Panel);
             this.Controls.Add(this.Login_Panel);
+            this.Controls.Add(this.Register_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.Opacity = 0D;
@@ -687,5 +693,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel STR_RANDOM;
+        private System.Windows.Forms.Timer BlinkIcon;
     }
 }

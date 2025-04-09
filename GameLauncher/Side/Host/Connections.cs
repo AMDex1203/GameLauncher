@@ -14,11 +14,12 @@ namespace GameLauncher.Side.Host
     {
         private static readonly string HostUTAMA = "http://localhost/new_launcher/config_launcher.base";
         public static string ProgramNAME = "Spinnet+";
+        public static string StringLanguageFileName = "Language.set";
 
 
         public static HostStatus access = HostStatus.Online;
         public static string LauncherVersion, MessageAllert;
-        public static int ClientVersion;
+        public static int ClientVersion, LauncherStatus;
 
 
         public static async Task<HostStatus> GetHostInfo()
@@ -39,6 +40,12 @@ namespace GameLauncher.Side.Host
                             {
                                 case "launcherversion":
                                     LauncherVersion = Config.Conf(line, id);
+                                    break;
+                                case "launcherstatus":
+                                    LauncherStatus = int.Parse(Config.Conf(line, id));
+                                    break;
+                                case "messagallert":
+                                    MessageAllert = Config.Conf(line, id);
                                     break;
                             }
                         }

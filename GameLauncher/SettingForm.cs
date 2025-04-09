@@ -1,9 +1,11 @@
 ﻿using GameLauncher.Side.Host;
+using GameLauncher.Side.Secure;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,26 @@ namespace GameLauncher
         {
             GetStringInfoVersion();
         }
+        string password = "your_password"; // Ganti dengan password yang Anda inginkan
+        private void GetLanguageSetting()
+        {
+            if (File.Exists(Connections.StringLanguageFileName))
+            {
+                string encryptedText = File.ReadAllText(Connections.StringLanguageFileName).Trim();
+                string decryptedText = Encryptions.ChipperEncryption.Decrypt(encryptedText, password);
+
+                if (LanguageSelect.SelectedIndex == 0)
+                {
+                    string encryptedEnText = Encryptions.ChipperEncryption.Encrypt("language=en", password);
+                    File.WriteAllText(Connections.StringLanguageFileName, encryptedEnText);
+                }
+                else if (LanguageSelect.SelectedIndex == 1)
+                {
+                    string encryptedIdText = Encryptions.ChipperEncryption.Encrypt("language=id", password);
+                    File.WriteAllText(Connections.StringLanguageFileName, encryptedIdText);
+                }
+            }
+        }
         private void GetStringInfoVersion()
         {
             if (Connections.LauncherVersion == null)
@@ -34,10 +56,14 @@ namespace GameLauncher
         }
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Settings saved successfully!");
+            GetLanguageSetting();
+            MessageBox.Show(InternalLauncher.InternalSTRING.STR_SAVE_SETTING);
             this.Close();
         }
-
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 

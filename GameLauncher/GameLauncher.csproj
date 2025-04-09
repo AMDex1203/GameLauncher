@@ -113,6 +113,7 @@
     <Compile Include="Side\Host\HostStatus.cs" />
     <Compile Include="Side\Log\Config.cs" />
     <Compile Include="Side\Log\Logger.cs" />
+    <Compile Include="Side\Secure\Encryptions.cs" />
     <Compile Include="Side\Secure\GetBanInfo.cs" />
     <Compile Include="Strings\GetString.cs" />
     <Compile Include="Strings\LanguageString\EnglishString.cs" />

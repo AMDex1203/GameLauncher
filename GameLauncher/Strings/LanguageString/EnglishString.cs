@@ -17,5 +17,7 @@ namespace GameLauncher.Strings.LanguageString
         public string STR_CONNECTION_BROKEN { get; set; } = "Failed To Connect Server \nServer Status Broken";
         public string STR_NULL_CONNECTION { get; set; } = "Failed To Connect Server \nServer Now Is Closed";
         public string STR_CHECK_CONNECTION { get; set; } = "Checking Connection...";
+        public string STR_MSG_MAINTENANCE { get; set; } = "Server is currently under Maintenance\nPlease try again later";
+        public string STR_SAVE_SETTING { get; set; } = "Settings Saved";
     }
 }

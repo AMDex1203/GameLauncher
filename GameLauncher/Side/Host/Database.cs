@@ -10,7 +10,7 @@ namespace GameLauncher.Side.Host
     {
         public static class HostDatabase
         {
-            public static string DatabaseConfig = "Host=152.42.173.36;Database=officialdb;Username=postgres;Password=spacegrid2025;";
+            public static string DatabaseConfig = "Host=152.42.173.36;Database=v1base;Username=postgres;Password=ahmadjaeee123!@#;";
         }
     }
 }
