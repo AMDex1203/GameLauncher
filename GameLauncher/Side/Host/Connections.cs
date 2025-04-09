@@ -12,11 +12,11 @@ namespace GameLauncher.Side.Host
 {
     public static class Connections
     {
-        private static readonly string HostUTAMA = "http://localhost/new_oauncher/config_launcher.base";
+        private static readonly string HostUTAMA = "http://localhost/new_launcher/config_launcher.base";
         public static string ProgramNAME = "Spinnet+";
 
 
-        public static HostStatus access = HostStatus.Offline;
+        public static HostStatus access = HostStatus.Online;
         public static string LauncherVersion, MessageAllert;
         public static int ClientVersion;
 

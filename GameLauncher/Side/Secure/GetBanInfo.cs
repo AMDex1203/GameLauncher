@@ -55,10 +55,12 @@ namespace GameLauncher.Side.Secure
             catch (NpgsqlException ex)
             {
                 MessageBox.Show($"Kesalahan database: {ex.Message}", "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Kesalahan umum Code A1 : {ex.Message}", "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
             }
         }
     }

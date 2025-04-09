@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameLauncher.Side.Host;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,18 @@ namespace GameLauncher
         }
         private void SettingForm_Load(object sender, EventArgs e)
         {
-            
+            GetStringInfoVersion();
+        }
+        private void GetStringInfoVersion()
+        {
+            if (Connections.LauncherVersion == null)
+            {
+                STR_VERSION_LAUNCHER.Text = "Error 404";
+            }
+            else
+            {
+                STR_VERSION_LAUNCHER.Text = Connections.LauncherVersion;
+            }
         }
         private void SaveButton_Click(object sender, EventArgs e)
         {
