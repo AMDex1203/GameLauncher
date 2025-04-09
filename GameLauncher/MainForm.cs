@@ -43,6 +43,11 @@ namespace GameLauncher
             Hide_Panel();
             Home_Panel.Show();
         }
+        private void SettingButton_Click(object sender, EventArgs e)
+        {
+            SettingForm settingForm = new SettingForm();
+            settingForm.Show();
+        }
         private void FadeinMainForm(object sender, EventArgs e)
         {
             Opacity += .2;
@@ -82,11 +87,6 @@ namespace GameLauncher
         }
 
         private void guna2GradientButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
 
         }

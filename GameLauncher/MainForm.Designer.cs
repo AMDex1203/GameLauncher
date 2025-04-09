@@ -354,7 +354,7 @@
             this.SettingButton.Text = "SETTING";
             this.SettingButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.SettingButton.TextOffset = new System.Drawing.Point(5, 0);
-            this.SettingButton.Click += new System.EventHandler(this.guna2GradientButton4_Click);
+            this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
             // 
             // HomeButton
             // 
@@ -489,8 +489,8 @@
             this.Controls.Add(this.TOPUPButton);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.GameList_Panel);
             this.Controls.Add(this.Home_Panel);
+            this.Controls.Add(this.GameList_Panel);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
