@@ -30,5 +30,8 @@ namespace GameLauncher.Strings
         string STR_TOPUP_CENTER { get; set; }
         string STR_ACCOUNT_CENTER { get; set; }
         string STR_SETTING_BUTTON { get; set; }
+        string STR_ID_OR_PASS { get; set; }
+        string STR_WRONG_ID_OR_PASS { get; set; }
+        string STR_UPDATE_FIRST { get; set; }
     }
 }

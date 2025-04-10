@@ -1,5 +1,6 @@
 ﻿using GameLauncher.Side.Data;
 using GameLauncher.Side.Host;
+using GameLauncher.Side.Secure;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -213,11 +214,42 @@ namespace GameLauncher
 
         }
 
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-            VerificationForm verificationForm = new VerificationForm();
-            verificationForm.Show();
-            this.Close();
+            try
+            {
+                string username = InputUsername.Text;
+                string password = InputPassword.Text;
+
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                {
+                    MessageBox.Show(InternalLauncher.InternalSTRING.STR_ID_OR_PASS, Connections.ProgramNAME, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (Validations.ValidasiLoginV3(username, password))
+                {
+                    if (ProgramVersion != Connections.LauncherVersion)
+                    {
+                        MessageBox.Show(InternalLauncher.InternalSTRING.STR_UPDATE_FIRST, Connections.ProgramNAME, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    else
+                    {
+                        VerificationForm verificationForm = new VerificationForm();
+                        verificationForm.Show();
+                        this.Hide();
+                    }
+                        
+                }
+                else
+                {
+                    MessageBox.Show(InternalLauncher.InternalSTRING.STR_WRONG_ID_OR_PASS, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kesalahan: " + ex);
+            }
         }
 
         private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)

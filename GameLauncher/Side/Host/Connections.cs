@@ -13,6 +13,7 @@ namespace GameLauncher.Side.Host
     public static class Connections
     {
         private static readonly string HostUTAMA = "http://localhost/new_launcher/config_launcher.base";
+        public static string HashDecoderHost = "http://localhost/new_launcher/hashdecoder.php";
         public static string ProgramNAME = "Spinnet+";
         public static string StringLanguageFileName = "Language.set";
 

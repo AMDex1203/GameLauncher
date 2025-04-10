@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLauncher", "GameLauncher\GameLauncher.csproj", "{DA3B9082-7DC5-40AA-ACBF-A315E0116AEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameUpdater", "GameUpdater\GameUpdater.csproj", "{5142403B-2C2A-4854-94B3-C499F2191F0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +17,15 @@ Global
 		{DA3B9082-7DC5-40AA-ACBF-A315E0116AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA3B9082-7DC5-40AA-ACBF-A315E0116AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA3B9082-7DC5-40AA-ACBF-A315E0116AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5142403B-2C2A-4854-94B3-C499F2191F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5142403B-2C2A-4854-94B3-C499F2191F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5142403B-2C2A-4854-94B3-C499F2191F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5142403B-2C2A-4854-94B3-C499F2191F0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {286D821A-2B97-4ACC-9988-AB466B25F41D}
 	EndGlobalSection
 EndGlobal

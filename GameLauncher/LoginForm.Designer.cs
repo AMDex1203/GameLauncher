@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.GunaElclipseLoginForm = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.LoginButton_Click = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.LoginButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.CloseButton = new Guna.UI2.WinForms.Guna2ControlBox();
             this.MinimizeButton = new Guna.UI2.WinForms.Guna2ControlBox();
             this.RegisterButton = new System.Windows.Forms.LinkLabel();
@@ -96,31 +96,31 @@
             this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.Red;
             this.guna2CheckBox1.CheckedChanged += new System.EventHandler(this.guna2CheckBox1_CheckedChanged);
             // 
-            // LoginButton_Click
+            // LoginButton
             // 
-            this.LoginButton_Click.Animated = true;
-            this.LoginButton_Click.AutoRoundedCorners = true;
-            this.LoginButton_Click.BorderRadius = 17;
-            this.LoginButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginButton_Click.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.LoginButton_Click.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.LoginButton_Click.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.LoginButton_Click.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.LoginButton_Click.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LoginButton_Click.FillColor = System.Drawing.Color.Red;
-            this.LoginButton_Click.FillColor2 = System.Drawing.Color.Black;
-            this.LoginButton_Click.Font = new System.Drawing.Font("Calibri", 12F);
-            this.LoginButton_Click.ForeColor = System.Drawing.Color.White;
-            this.LoginButton_Click.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.LoginButton_Click.Location = new System.Drawing.Point(26, 361);
-            this.LoginButton_Click.Name = "LoginButton_Click";
-            this.LoginButton_Click.PressedColor = System.Drawing.Color.White;
-            this.LoginButton_Click.PressedDepth = 40;
-            this.LoginButton_Click.Size = new System.Drawing.Size(180, 36);
-            this.LoginButton_Click.TabIndex = 5;
-            this.LoginButton_Click.Text = "LOGIN";
-            this.LoginButton_Click.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
-            this.LoginButton_Click.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            this.LoginButton.Animated = true;
+            this.LoginButton.AutoRoundedCorners = true;
+            this.LoginButton.BorderRadius = 17;
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoginButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LoginButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LoginButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LoginButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LoginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LoginButton.FillColor = System.Drawing.Color.Red;
+            this.LoginButton.FillColor2 = System.Drawing.Color.Black;
+            this.LoginButton.Font = new System.Drawing.Font("Calibri", 12F);
+            this.LoginButton.ForeColor = System.Drawing.Color.White;
+            this.LoginButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.LoginButton.Location = new System.Drawing.Point(26, 361);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.PressedColor = System.Drawing.Color.White;
+            this.LoginButton.PressedDepth = 40;
+            this.LoginButton.Size = new System.Drawing.Size(180, 36);
+            this.LoginButton.TabIndex = 5;
+            this.LoginButton.Text = "LOGIN";
+            this.LoginButton.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // CloseButton
             // 
@@ -241,7 +241,7 @@
             this.Login_Panel.Controls.Add(this.LoginName);
             this.Login_Panel.Controls.Add(this.InputPassword);
             this.Login_Panel.Controls.Add(this.guna2CheckBox1);
-            this.Login_Panel.Controls.Add(this.LoginButton_Click);
+            this.Login_Panel.Controls.Add(this.LoginButton);
             this.Login_Panel.Controls.Add(this.ForgotPasswordLink);
             this.Login_Panel.Controls.Add(this.RegisterButton);
             this.Login_Panel.Location = new System.Drawing.Point(398, 45);
@@ -671,7 +671,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Elipse GunaElclipseLoginForm;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton LoginButton_Click;
+        private Guna.UI2.WinForms.Guna2GradientButton LoginButton;
         private Guna.UI2.WinForms.Guna2ControlBox CloseButton;
         private Guna.UI2.WinForms.Guna2ControlBox MinimizeButton;
         private System.Windows.Forms.LinkLabel RegisterButton;

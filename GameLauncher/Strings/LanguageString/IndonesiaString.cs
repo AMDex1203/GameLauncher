@@ -33,5 +33,13 @@ namespace GameLauncher.Strings.LanguageString
         public string STR_TOPUP_CENTER { get; set; } = "PUSAT TOPUP";
         public string STR_ACCOUNT_CENTER { get; set; } = "AKUN SAYA";
         public string STR_SETTING_BUTTON { get; set; } = "PENGATURAN";
+
+        //=============== End String Main =============
+
+        //=============== String Login Form =============
+
+        public string STR_ID_OR_PASS { get; set; } = "Username atau Password Tidak Boleh Kosong";
+        public string STR_WRONG_ID_OR_PASS { get; set; } = "Username atau Password Salah";
+        public string STR_UPDATE_FIRST { get; set; } = "Silahkan Update Terlebih Dahulu";
     }
 }
