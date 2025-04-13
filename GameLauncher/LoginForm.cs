@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,14 @@ namespace GameLauncher
             RegisterButton.Text = InternalLauncher.InternalSTRING.STR_REGISTER_TEXT;
             RegisterText.Text = InternalLauncher.InternalSTRING.STR_REGISTER_NAME;
             ForgotPasswordLink.Text = InternalLauncher.InternalSTRING.STR_FORGOT_PASS;
+        }
+        private void InputPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r') // 13 adalah kode ASCII untuk tombol Enter
+            {
+                LoginButton_Click(sender, e);
+                e.Handled = true;
+            }
         }
         private void NotifyUpdate()
         {

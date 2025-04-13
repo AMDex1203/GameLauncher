@@ -8817,7 +8817,7 @@
         tAnmbUGbcDagSePOgURex1+NAg/LSgwPhQYPy+dBix10oFc+BoMaXvY0H//Z
 </value>
   </data>
-  <data name="guna2GradientButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RunGameP1_Click.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAWRJREFUaEPtmb1NA0EUhA8hIIGMlIQCaIAOKIIWCHABtOCQlJCUBmgACiAmJSOx
@@ -8827,6 +8827,32 @@
         BmKTozuQhVMAfJBbBkrTHciiKUnVHchiOYjdHcgiuYjZHcgCuRhFEODJ91fL/Y99FH+/7hdE9y3KV9N4
         aGXSSxoZgvs23v2LlftX3VFsPsRelWNIGt2G+w261KtyDEnjq7jfxHZ/rFBiVY6hjRDOj95GcRgawjXZ
         s8umpqamEuq6OTZ87HgE9BCoAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="InstallGameP1_Click.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAahJREFUaEPtmTFLQlEUgAWXAoOEIGpoSCjEpaWhlpqiIBqShpz6ZzVEv6JWG2po
+        aWkIChqCoIggisq+4z0t4rtavnu9wfngW+S8d74LkfosGIYRn1artYoneN6hvLaiY2lD6Cg+YRaPOKLj
+        6UJktZ3rp6rj6UJkzbV6qel4ukika/ViB4mGRLpWL3aQaEika/ViB4mGRLpWL3aQaEika/ViB4mGRLpW
+        L3aQaEika/ViB8kVQkpYznAJeyEz3a4VS7omLCyq4xeGQu69revCwZIN/JSNgZB7r+u6sLBoF99la858
+        4J6uiQMLN/FVtufEG4b/k+oGi+Wxz7NUDMgLrulthwMBi/ggNX9EHg8t6+2GCyHy3nEnVb/kHhf0NmlA
+        0DzeSl2f3OCcXp4WhM3glVT24Bpn9bI0IXASL6Q2g0uc1vG0IXQcm1LdwRlO6Nj/gOAxlKfvPxxjnM9R
+        eUN4EbfUor5sGIaRM/yHqaB8E9xJTGmqaKYfBhsY8hvgoEhbQ3OzYei0PZ42Tc3NhqEjN5s0h5qbDUNT
+        eICdP/an4j6WNdcwjL4oFL4BINMoon/vgawAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="UpdateGameP1_Click.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAahJREFUaEPtmTFLQlEUgAWXAoOEIGpoSCjEpaWhlpqiIBqShpz6ZzVEv6JWG2po
+        aWkIChqCoIggisq+4z0t4rtavnu9wfngW+S8d74LkfosGIYRn1artYoneN6hvLaiY2lD6Cg+YRaPOKLj
+        6UJktZ3rp6rj6UJkzbV6qel4ukika/ViB4mGRLpWL3aQaEika/ViB4mGRLpWL3aQaEika/ViB4mGRLpW
+        L3aQaEika/ViB8kVQkpYznAJeyEz3a4VS7omLCyq4xeGQu69revCwZIN/JSNgZB7r+u6sLBoF99la858
+        4J6uiQMLN/FVtufEG4b/k+oGi+Wxz7NUDMgLrulthwMBi/ggNX9EHg8t6+2GCyHy3nEnVb/kHhf0NmlA
+        0DzeSl2f3OCcXp4WhM3glVT24Bpn9bI0IXASL6Q2g0uc1vG0IXQcm1LdwRlO6Nj/gOAxlKfvPxxjnM9R
+        eUN4EbfUor5sGIaRM/yHqaB8E9xJTGmqaKYfBhsY8hvgoEhbQ3OzYei0PZ42Tc3NhqEjN5s0h5qbDUNT
+        eICdP/an4j6WNdcwjL4oFL4BINMoon/vgawAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="IsiPesanProject.Text" xml:space="preserve">

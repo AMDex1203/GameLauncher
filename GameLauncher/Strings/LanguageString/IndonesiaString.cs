@@ -18,7 +18,7 @@ namespace GameLauncher.Strings.LanguageString
         public string STR_NULL_CONNECTION { get; set; } = "Gagal Terhubung Ke Server \nServer Status Tidak Ditemukan";
         public string STR_CHECK_CONNECTION { get; set; } = "Memeriksa Koneksi...";
         public string STR_MSG_MAINTENANCE { get; set; } = "Server Saat Ini Sedang Dalam Maintenance\nSilahkan Coba Lagi Nanti";
-        public string STR_SAVE_SETTING { get; set; } = "Pengaturan Telah Tersimpan";
+        public string STR_SAVE_SETTING { get; set; } = "Pengaturan Telah Tersimpan\nPerubahan Akan Berefek ketika anda memuat ulang Program";
         public string STR_MINIMIZE_CHECK { get; set; } = "Minimize Program Saat Game Dimulai";
         public string STR_LOGIN_NAME { get; set; } = "Masuk";
         public string STR_REGISTER_NAME { get; set; } = "Daftar";

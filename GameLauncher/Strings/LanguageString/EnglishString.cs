@@ -18,7 +18,7 @@ namespace GameLauncher.Strings.LanguageString
         public string STR_NULL_CONNECTION { get; set; } = "Failed To Connect Server \nServer Now Is Closed";
         public string STR_CHECK_CONNECTION { get; set; } = "Checking Connection...";
         public string STR_MSG_MAINTENANCE { get; set; } = "Server is currently under Maintenance\nPlease try again later";
-        public string STR_SAVE_SETTING { get; set; } = "Settings Saved";
+        public string STR_SAVE_SETTING { get; set; } = "Settings Have Been Saved\nChanges Will Take Effect When You Reload the Program";
         public string STR_MINIMIZE_CHECK { get; set; } = "Minimize When Game Start";
         public string STR_LOGIN_NAME { get; set; } = "Login Area";
         public string STR_REGISTER_NAME { get; set; } = "Register Area";

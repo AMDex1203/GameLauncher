@@ -1,4 +1,5 @@
-﻿using GameLauncher.Side.Host;
+﻿using GameLauncher.Properties;
+using GameLauncher.Side.Host;
 using GameLauncher.Side.Secure;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace GameLauncher
         {
             GetStringInfoVersion();
             STRINGView();
+            AutoSetLanguage();
         }
         private void STRINGView()
         {
@@ -46,6 +48,30 @@ namespace GameLauncher
                     string encryptedIdText = Encryptions.ChipperEncryption.Encrypt("language=id", password);
                     File.WriteAllText(Connections.StringLanguageFileName, encryptedIdText);
                 }
+            }
+        }
+        private void AutoSetLanguage()
+        {
+            string password = "your_password"; // Ganti dengan password yang Anda inginkan
+
+            if (File.Exists(Connections.StringLanguageFileName))
+            {
+                string encryptedText = File.ReadAllText(Connections.StringLanguageFileName).Trim();
+                string decryptedText = Encryptions.ChipperEncryption.Decrypt(encryptedText, password);
+
+                if (decryptedText == "language=id")
+                {
+                    LanguageSelect.SelectedIndex = 1; // Bahasa Indonesia
+                }
+                else if (decryptedText == "language=en")
+                {
+                    LanguageSelect.SelectedIndex = 0; // Bahasa Inggris
+                }
+            }
+            else
+            {
+                string encryptedText = Encryptions.ChipperEncryption.Decrypt("language=id", password);
+                File.WriteAllText(Connections.StringLanguageFileName, encryptedText);
             }
         }
         private void GetStringInfoVersion()

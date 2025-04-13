@@ -41,14 +41,20 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ImageChange_Box = new Guna.UI2.WinForms.Guna2PictureBox();
             this.GameList_Panel = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.Game_Panel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.STR_VERSION_GAME_PG2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.GN_Panel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.Game_Panel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.STR_VERSION_GAME_PG1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.GN_Panel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.GAME_NAME = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.RunGameP1_Click = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.InstallGameP1_Click = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.UpdateGameP1_Click = new Guna.UI2.WinForms.Guna2GradientButton();
             this.ImageChanger = new System.Windows.Forms.Timer(this.components);
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -60,13 +66,22 @@
             this.ListGameButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.TOPUPButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.GAME_NAME = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TopUpCenter_Panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.STR_COUNT_ONLINE_USERP2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.STR_COUNT_ONLINE_USERP1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1.SuspendLayout();
             this.Home_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageChange_Box)).BeginInit();
             this.GameList_Panel.SuspendLayout();
-            this.guna2CustomGradientPanel2.SuspendLayout();
+            this.Game_Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.Game_Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -123,9 +138,9 @@
             this.Home_Panel.Controls.Add(this.guna2HtmlLabel1);
             this.Home_Panel.Controls.Add(this.ImageChange_Box);
             this.Home_Panel.FillColor = System.Drawing.Color.Black;
-            this.Home_Panel.Location = new System.Drawing.Point(211, 46);
+            this.Home_Panel.Location = new System.Drawing.Point(241, 46);
             this.Home_Panel.Name = "Home_Panel";
-            this.Home_Panel.Size = new System.Drawing.Size(822, 657);
+            this.Home_Panel.Size = new System.Drawing.Size(782, 657);
             this.Home_Panel.TabIndex = 12;
             // 
             // IsiPesanProject
@@ -136,7 +151,7 @@
             this.IsiPesanProject.ForeColor = System.Drawing.Color.White;
             this.IsiPesanProject.Location = new System.Drawing.Point(34, 365);
             this.IsiPesanProject.Name = "IsiPesanProject";
-            this.IsiPesanProject.Size = new System.Drawing.Size(739, 197);
+            this.IsiPesanProject.Size = new System.Drawing.Size(714, 241);
             this.IsiPesanProject.TabIndex = 3;
             this.IsiPesanProject.Text = resources.GetString("IsiPesanProject.Text");
             this.IsiPesanProject.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -174,42 +189,88 @@
             this.ImageChange_Box.BorderRadius = 10;
             this.ImageChange_Box.Image = ((System.Drawing.Image)(resources.GetObject("ImageChange_Box.Image")));
             this.ImageChange_Box.ImageRotate = 0F;
-            this.ImageChange_Box.Location = new System.Drawing.Point(10, 6);
+            this.ImageChange_Box.Location = new System.Drawing.Point(10, 0);
             this.ImageChange_Box.Name = "ImageChange_Box";
             this.ImageChange_Box.ShadowDecoration.Color = System.Drawing.Color.Red;
             this.ImageChange_Box.ShadowDecoration.Enabled = true;
-            this.ImageChange_Box.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10, 0, 0, 10);
-            this.ImageChange_Box.Size = new System.Drawing.Size(800, 241);
+            this.ImageChange_Box.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            this.ImageChange_Box.Size = new System.Drawing.Size(762, 241);
             this.ImageChange_Box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImageChange_Box.TabIndex = 0;
             this.ImageChange_Box.TabStop = false;
             // 
             // GameList_Panel
             // 
+            this.GameList_Panel.AutoScrollMargin = new System.Drawing.Size(0, 100);
             this.GameList_Panel.BorderColor = System.Drawing.Color.Black;
-            this.GameList_Panel.Controls.Add(this.guna2CustomGradientPanel2);
-            this.GameList_Panel.Controls.Add(this.guna2CustomGradientPanel1);
+            this.GameList_Panel.Controls.Add(this.Game_Panel2);
+            this.GameList_Panel.Controls.Add(this.Game_Panel1);
             this.GameList_Panel.FillColor = System.Drawing.Color.Black;
-            this.GameList_Panel.Location = new System.Drawing.Point(211, 49);
+            this.GameList_Panel.Location = new System.Drawing.Point(241, 46);
             this.GameList_Panel.Name = "GameList_Panel";
-            this.GameList_Panel.Size = new System.Drawing.Size(819, 651);
+            this.GameList_Panel.Size = new System.Drawing.Size(782, 657);
             this.GameList_Panel.TabIndex = 5;
             // 
-            // guna2CustomGradientPanel2
+            // Game_Panel2
             // 
-            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.BorderRadius = 10;
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2PictureBox3);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2GradientButton4);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.Red;
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(453, 31);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(332, 303);
-            this.guna2CustomGradientPanel2.TabIndex = 6;
+            this.Game_Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.Game_Panel2.BorderRadius = 10;
+            this.Game_Panel2.Controls.Add(this.STR_COUNT_ONLINE_USERP2);
+            this.Game_Panel2.Controls.Add(this.guna2HtmlLabel6);
+            this.Game_Panel2.Controls.Add(this.STR_VERSION_GAME_PG2);
+            this.Game_Panel2.Controls.Add(this.guna2HtmlLabel7);
+            this.Game_Panel2.Controls.Add(this.GN_Panel2);
+            this.Game_Panel2.Controls.Add(this.guna2PictureBox3);
+            this.Game_Panel2.Controls.Add(this.guna2GradientButton4);
+            this.Game_Panel2.FillColor = System.Drawing.Color.Black;
+            this.Game_Panel2.FillColor2 = System.Drawing.Color.Red;
+            this.Game_Panel2.FillColor3 = System.Drawing.Color.Black;
+            this.Game_Panel2.FillColor4 = System.Drawing.Color.Black;
+            this.Game_Panel2.Location = new System.Drawing.Point(416, 82);
+            this.Game_Panel2.Name = "Game_Panel2";
+            this.Game_Panel2.Size = new System.Drawing.Size(332, 475);
+            this.Game_Panel2.TabIndex = 6;
+            // 
+            // STR_VERSION_GAME_PG2
+            // 
+            this.STR_VERSION_GAME_PG2.AutoSize = false;
+            this.STR_VERSION_GAME_PG2.BackColor = System.Drawing.Color.Transparent;
+            this.STR_VERSION_GAME_PG2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STR_VERSION_GAME_PG2.ForeColor = System.Drawing.Color.White;
+            this.STR_VERSION_GAME_PG2.Location = new System.Drawing.Point(132, 232);
+            this.STR_VERSION_GAME_PG2.Name = "STR_VERSION_GAME_PG2";
+            this.STR_VERSION_GAME_PG2.Size = new System.Drawing.Size(185, 34);
+            this.STR_VERSION_GAME_PG2.TabIndex = 10;
+            this.STR_VERSION_GAME_PG2.Text = "Version Game";
+            this.STR_VERSION_GAME_PG2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.AutoSize = false;
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(17, 232);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(116, 34);
+            this.guna2HtmlLabel7.TabIndex = 9;
+            this.guna2HtmlLabel7.Text = "Version Game :";
+            this.guna2HtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // GN_Panel2
+            // 
+            this.GN_Panel2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.GN_Panel2.AutoSize = false;
+            this.GN_Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.GN_Panel2.Font = new System.Drawing.Font("KNIGHT WARRIOR", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GN_Panel2.ForeColor = System.Drawing.Color.White;
+            this.GN_Panel2.Location = new System.Drawing.Point(17, 182);
+            this.GN_Panel2.Name = "GN_Panel2";
+            this.GN_Panel2.Size = new System.Drawing.Size(300, 44);
+            this.GN_Panel2.TabIndex = 7;
+            this.GN_Panel2.Text = "Game Name";
+            this.GN_Panel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GN_Panel2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
             // 
             // guna2PictureBox3
             // 
@@ -226,18 +287,6 @@
             this.guna2PictureBox3.TabIndex = 0;
             this.guna2PictureBox3.TabStop = false;
             // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(17, 192);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(129, 33);
-            this.guna2HtmlLabel2.TabIndex = 4;
-            this.guna2HtmlLabel2.Text = "POINT BLANK";
-            // 
             // guna2GradientButton4
             // 
             this.guna2GradientButton4.BackColor = System.Drawing.Color.Transparent;
@@ -253,26 +302,73 @@
             this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientButton4.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton4.Image")));
-            this.guna2GradientButton4.Location = new System.Drawing.Point(17, 231);
+            this.guna2GradientButton4.Location = new System.Drawing.Point(188, 408);
             this.guna2GradientButton4.Name = "guna2GradientButton4";
             this.guna2GradientButton4.Size = new System.Drawing.Size(129, 45);
             this.guna2GradientButton4.TabIndex = 3;
             this.guna2GradientButton4.Text = "RUN GAME";
             // 
-            // guna2CustomGradientPanel1
+            // Game_Panel1
             // 
-            this.guna2CustomGradientPanel1.BorderRadius = 10;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.GAME_NAME);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton1);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Red;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(34, 31);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(332, 303);
-            this.guna2CustomGradientPanel1.TabIndex = 5;
+            this.Game_Panel1.BorderRadius = 10;
+            this.Game_Panel1.Controls.Add(this.STR_COUNT_ONLINE_USERP1);
+            this.Game_Panel1.Controls.Add(this.guna2HtmlLabel8);
+            this.Game_Panel1.Controls.Add(this.STR_VERSION_GAME_PG1);
+            this.Game_Panel1.Controls.Add(this.guna2HtmlLabel5);
+            this.Game_Panel1.Controls.Add(this.GN_Panel1);
+            this.Game_Panel1.Controls.Add(this.guna2PictureBox2);
+            this.Game_Panel1.Controls.Add(this.RunGameP1_Click);
+            this.Game_Panel1.Controls.Add(this.InstallGameP1_Click);
+            this.Game_Panel1.Controls.Add(this.UpdateGameP1_Click);
+            this.Game_Panel1.FillColor = System.Drawing.Color.Black;
+            this.Game_Panel1.FillColor2 = System.Drawing.Color.Red;
+            this.Game_Panel1.FillColor3 = System.Drawing.Color.Black;
+            this.Game_Panel1.FillColor4 = System.Drawing.Color.Black;
+            this.Game_Panel1.Location = new System.Drawing.Point(34, 82);
+            this.Game_Panel1.Name = "Game_Panel1";
+            this.Game_Panel1.Size = new System.Drawing.Size(332, 475);
+            this.Game_Panel1.TabIndex = 5;
+            // 
+            // STR_VERSION_GAME_PG1
+            // 
+            this.STR_VERSION_GAME_PG1.AutoSize = false;
+            this.STR_VERSION_GAME_PG1.BackColor = System.Drawing.Color.Transparent;
+            this.STR_VERSION_GAME_PG1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STR_VERSION_GAME_PG1.ForeColor = System.Drawing.Color.White;
+            this.STR_VERSION_GAME_PG1.Location = new System.Drawing.Point(132, 232);
+            this.STR_VERSION_GAME_PG1.Name = "STR_VERSION_GAME_PG1";
+            this.STR_VERSION_GAME_PG1.Size = new System.Drawing.Size(177, 34);
+            this.STR_VERSION_GAME_PG1.TabIndex = 8;
+            this.STR_VERSION_GAME_PG1.Text = "Version Game";
+            this.STR_VERSION_GAME_PG1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.AutoSize = false;
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(17, 232);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(116, 34);
+            this.guna2HtmlLabel5.TabIndex = 7;
+            this.guna2HtmlLabel5.Text = "Version Game :";
+            this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // GN_Panel1
+            // 
+            this.GN_Panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.GN_Panel1.AutoSize = false;
+            this.GN_Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.GN_Panel1.Font = new System.Drawing.Font("KNIGHT WARRIOR", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GN_Panel1.ForeColor = System.Drawing.Color.White;
+            this.GN_Panel1.Location = new System.Drawing.Point(17, 190);
+            this.GN_Panel1.Name = "GN_Panel1";
+            this.GN_Panel1.Size = new System.Drawing.Size(292, 44);
+            this.GN_Panel1.TabIndex = 6;
+            this.GN_Panel1.Text = "Game Name";
+            this.GN_Panel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GN_Panel1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
             // 
             // guna2PictureBox2
             // 
@@ -289,38 +385,71 @@
             this.guna2PictureBox2.TabIndex = 0;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // GAME_NAME
+            // RunGameP1_Click
             // 
-            this.GAME_NAME.AutoSize = false;
-            this.GAME_NAME.BackColor = System.Drawing.Color.Transparent;
-            this.GAME_NAME.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GAME_NAME.ForeColor = System.Drawing.Color.White;
-            this.GAME_NAME.Location = new System.Drawing.Point(17, 192);
-            this.GAME_NAME.Name = "GAME_NAME";
-            this.GAME_NAME.Size = new System.Drawing.Size(129, 33);
-            this.GAME_NAME.TabIndex = 4;
-            this.GAME_NAME.Text = "POINT BLANK";
+            this.RunGameP1_Click.Animated = true;
+            this.RunGameP1_Click.BackColor = System.Drawing.Color.Transparent;
+            this.RunGameP1_Click.BorderRadius = 10;
+            this.RunGameP1_Click.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RunGameP1_Click.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RunGameP1_Click.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RunGameP1_Click.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RunGameP1_Click.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RunGameP1_Click.FillColor = System.Drawing.Color.Red;
+            this.RunGameP1_Click.FillColor2 = System.Drawing.Color.Black;
+            this.RunGameP1_Click.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.RunGameP1_Click.ForeColor = System.Drawing.Color.White;
+            this.RunGameP1_Click.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.RunGameP1_Click.Image = ((System.Drawing.Image)(resources.GetObject("RunGameP1_Click.Image")));
+            this.RunGameP1_Click.Location = new System.Drawing.Point(188, 408);
+            this.RunGameP1_Click.Name = "RunGameP1_Click";
+            this.RunGameP1_Click.Size = new System.Drawing.Size(129, 45);
+            this.RunGameP1_Click.TabIndex = 3;
+            this.RunGameP1_Click.Text = "RUN GAME";
             // 
-            // guna2GradientButton1
+            // InstallGameP1_Click
             // 
-            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.BorderRadius = 10;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.Red;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Black;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton1.Image")));
-            this.guna2GradientButton1.Location = new System.Drawing.Point(17, 231);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(129, 45);
-            this.guna2GradientButton1.TabIndex = 3;
-            this.guna2GradientButton1.Text = "RUN GAME";
+            this.InstallGameP1_Click.Animated = true;
+            this.InstallGameP1_Click.BackColor = System.Drawing.Color.Transparent;
+            this.InstallGameP1_Click.BorderRadius = 10;
+            this.InstallGameP1_Click.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.InstallGameP1_Click.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.InstallGameP1_Click.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.InstallGameP1_Click.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.InstallGameP1_Click.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.InstallGameP1_Click.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.InstallGameP1_Click.FillColor2 = System.Drawing.Color.Black;
+            this.InstallGameP1_Click.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.InstallGameP1_Click.ForeColor = System.Drawing.Color.White;
+            this.InstallGameP1_Click.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.InstallGameP1_Click.Image = ((System.Drawing.Image)(resources.GetObject("InstallGameP1_Click.Image")));
+            this.InstallGameP1_Click.Location = new System.Drawing.Point(188, 408);
+            this.InstallGameP1_Click.Name = "InstallGameP1_Click";
+            this.InstallGameP1_Click.Size = new System.Drawing.Size(129, 45);
+            this.InstallGameP1_Click.TabIndex = 5;
+            this.InstallGameP1_Click.Text = "INSTALL";
+            // 
+            // UpdateGameP1_Click
+            // 
+            this.UpdateGameP1_Click.Animated = true;
+            this.UpdateGameP1_Click.BackColor = System.Drawing.Color.Transparent;
+            this.UpdateGameP1_Click.BorderRadius = 10;
+            this.UpdateGameP1_Click.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UpdateGameP1_Click.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UpdateGameP1_Click.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UpdateGameP1_Click.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UpdateGameP1_Click.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UpdateGameP1_Click.FillColor = System.Drawing.Color.DodgerBlue;
+            this.UpdateGameP1_Click.FillColor2 = System.Drawing.Color.Black;
+            this.UpdateGameP1_Click.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.UpdateGameP1_Click.ForeColor = System.Drawing.Color.White;
+            this.UpdateGameP1_Click.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.UpdateGameP1_Click.Image = ((System.Drawing.Image)(resources.GetObject("UpdateGameP1_Click.Image")));
+            this.UpdateGameP1_Click.Location = new System.Drawing.Point(188, 408);
+            this.UpdateGameP1_Click.Name = "UpdateGameP1_Click";
+            this.UpdateGameP1_Click.Size = new System.Drawing.Size(129, 45);
+            this.UpdateGameP1_Click.TabIndex = 4;
+            this.UpdateGameP1_Click.Text = "UPDATE";
             // 
             // ImageChanger
             // 
@@ -468,7 +597,7 @@
             this.HomeButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.HomeButton.FillColor = System.Drawing.Color.Black;
             this.HomeButton.FillColor2 = System.Drawing.Color.Red;
-            this.HomeButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.HomeButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.White;
             this.HomeButton.Image = ((System.Drawing.Image)(resources.GetObject("HomeButton.Image")));
             this.HomeButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -558,6 +687,7 @@
             this.TOPUPButton.Text = "TOPUP CENTER";
             this.TOPUPButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TOPUPButton.TextOffset = new System.Drawing.Point(5, 0);
+            this.TOPUPButton.Click += new System.EventHandler(this.TOPUPButton_Click);
             // 
             // guna2PictureBox1
             // 
@@ -571,6 +701,113 @@
             this.guna2PictureBox1.Size = new System.Drawing.Size(184, 141);
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(17, 192);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(129, 33);
+            this.guna2HtmlLabel3.TabIndex = 4;
+            this.guna2HtmlLabel3.Text = "POINT BLANK";
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.AutoSize = false;
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(17, 192);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(129, 33);
+            this.guna2HtmlLabel4.TabIndex = 4;
+            this.guna2HtmlLabel4.Text = "POINT BLANK";
+            // 
+            // GAME_NAME
+            // 
+            this.GAME_NAME.AutoSize = false;
+            this.GAME_NAME.BackColor = System.Drawing.Color.Transparent;
+            this.GAME_NAME.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GAME_NAME.ForeColor = System.Drawing.Color.White;
+            this.GAME_NAME.Location = new System.Drawing.Point(17, 192);
+            this.GAME_NAME.Name = "GAME_NAME";
+            this.GAME_NAME.Size = new System.Drawing.Size(129, 33);
+            this.GAME_NAME.TabIndex = 4;
+            this.GAME_NAME.Text = "POINT BLANK";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(17, 192);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(129, 33);
+            this.guna2HtmlLabel2.TabIndex = 4;
+            this.guna2HtmlLabel2.Text = "POINT BLANK";
+            // 
+            // TopUpCenter_Panel
+            // 
+            this.TopUpCenter_Panel.Location = new System.Drawing.Point(241, 46);
+            this.TopUpCenter_Panel.Name = "TopUpCenter_Panel";
+            this.TopUpCenter_Panel.Size = new System.Drawing.Size(782, 657);
+            this.TopUpCenter_Panel.TabIndex = 15;
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.AutoSize = false;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(17, 261);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(116, 34);
+            this.guna2HtmlLabel6.TabIndex = 11;
+            this.guna2HtmlLabel6.Text = "Online Player";
+            this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // STR_COUNT_ONLINE_USERP2
+            // 
+            this.STR_COUNT_ONLINE_USERP2.AutoSize = false;
+            this.STR_COUNT_ONLINE_USERP2.BackColor = System.Drawing.Color.Transparent;
+            this.STR_COUNT_ONLINE_USERP2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STR_COUNT_ONLINE_USERP2.ForeColor = System.Drawing.Color.White;
+            this.STR_COUNT_ONLINE_USERP2.Location = new System.Drawing.Point(132, 261);
+            this.STR_COUNT_ONLINE_USERP2.Name = "STR_COUNT_ONLINE_USERP2";
+            this.STR_COUNT_ONLINE_USERP2.Size = new System.Drawing.Size(116, 34);
+            this.STR_COUNT_ONLINE_USERP2.TabIndex = 12;
+            this.STR_COUNT_ONLINE_USERP2.Text = "STR_COUNT";
+            this.STR_COUNT_ONLINE_USERP2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2HtmlLabel8
+            // 
+            this.guna2HtmlLabel8.AutoSize = false;
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(17, 261);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(116, 34);
+            this.guna2HtmlLabel8.TabIndex = 13;
+            this.guna2HtmlLabel8.Text = "Online Player";
+            this.guna2HtmlLabel8.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // STR_COUNT_ONLINE_USERP1
+            // 
+            this.STR_COUNT_ONLINE_USERP1.AutoSize = false;
+            this.STR_COUNT_ONLINE_USERP1.BackColor = System.Drawing.Color.Transparent;
+            this.STR_COUNT_ONLINE_USERP1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STR_COUNT_ONLINE_USERP1.ForeColor = System.Drawing.Color.White;
+            this.STR_COUNT_ONLINE_USERP1.Location = new System.Drawing.Point(132, 261);
+            this.STR_COUNT_ONLINE_USERP1.Name = "STR_COUNT_ONLINE_USERP1";
+            this.STR_COUNT_ONLINE_USERP1.Size = new System.Drawing.Size(116, 34);
+            this.STR_COUNT_ONLINE_USERP1.TabIndex = 13;
+            this.STR_COUNT_ONLINE_USERP1.Text = "STR_COUNT";
+            this.STR_COUNT_ONLINE_USERP1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // MainForm
             // 
@@ -591,6 +828,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.GameList_Panel);
             this.Controls.Add(this.Home_Panel);
+            this.Controls.Add(this.TopUpCenter_Panel);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -601,9 +839,9 @@
             this.Home_Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImageChange_Box)).EndInit();
             this.GameList_Panel.ResumeLayout(false);
-            this.guna2CustomGradientPanel2.ResumeLayout(false);
+            this.Game_Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.Game_Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -624,9 +862,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientButton ItemShopButton;
         private Guna.UI2.WinForms.Guna2Panel Home_Panel;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2Panel GameList_Panel;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2PictureBox ImageChange_Box;
@@ -635,11 +871,28 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel IntroProject;
         private Guna.UI2.WinForms.Guna2HtmlLabel IsiPesanProject;
-        private Guna.UI2.WinForms.Guna2HtmlLabel GAME_NAME;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel Game_Panel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel Game_Panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2GradientButton RunGameP1_Click;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel GAME_NAME;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2Panel TopUpCenter_Panel;
+        private Guna.UI2.WinForms.Guna2GradientButton InstallGameP1_Click;
+        private Guna.UI2.WinForms.Guna2GradientButton UpdateGameP1_Click;
+        private Guna.UI2.WinForms.Guna2HtmlLabel GN_Panel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel GN_Panel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel STR_VERSION_GAME_PG2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel STR_VERSION_GAME_PG1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel STR_COUNT_ONLINE_USERP2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel STR_COUNT_ONLINE_USERP1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
     }
 }

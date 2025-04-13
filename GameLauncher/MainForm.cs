@@ -1,4 +1,7 @@
-﻿using GameLauncher.Side.Log;
+﻿using GameLauncher.Side.Host;
+using GameLauncher.Side.Log;
+using Guna.UI2.WinForms;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,17 +44,96 @@ namespace GameLauncher
         {
             Home_Panel.Hide();
             GameList_Panel.Hide();
+            TopUpCenter_Panel.Hide();
+
+
+            HideAutoScroll();
+        }
+        private void HideAutoScroll()
+        {
+            TopUpCenter_Panel.AutoScroll = false;
         }
 
         private void GameListButton_Click(object sender, EventArgs e)
         {
             Hide_Panel();
             GameList_Panel.Show();
+
+            Game_Panel1.Hide();
+            Game_Panel2.Hide();
+
+            try
+            {
+                using (NpgsqlConnection conn = new NpgsqlConnection(Database.HostDatabase.DatabaseConfig))
+                {
+                    conn.Open();
+                    string query = "SELECT id, game_name, version, udp_version, update_link, client_link, visible FROM data_game_list";
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                    {
+                        using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string game_id = reader["id"].ToString();
+                                string game_name = reader["game_name"].ToString();
+                                string game_version = reader["version"].ToString();
+                                string game_udp_version = reader["udp_version"].ToString();
+                                string game_update_link = reader["update_link"].ToString();
+                                string game_client_link = reader["client_link"].ToString();
+                                string game_visible = reader["visible"].ToString();
+
+                                if (game_id == "1")
+                                {
+                                    if (game_visible.ToLower() == "true")
+                                    {
+                                        GN_Panel1.Text = game_name;
+                                        STR_VERSION_GAME_PG1.Text = game_version;
+                                        Game_Panel1.Show();
+                                    }
+                                    else
+                                    {
+                                        Game_Panel1.Hide();
+                                    }
+                                }
+                                else if (game_id == "2")
+                                {
+                                    if (game_visible.ToLower() == "true")
+                                    {
+                                        GN_Panel2.Text = game_name;
+                                        STR_VERSION_GAME_PG2.Text = game_version;
+                                        Game_Panel2.Show();
+                                    }
+                                    else
+                                    {
+                                        Game_Panel2.Hide();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception (e.g., log it, show a message box, etc.)
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
         private void HomeButton_Click(Object sender, EventArgs e)
         {
             Hide_Panel();
             Home_Panel.Show();
+        }
+        private void ItemShopButton_Click(object sender, EventArgs e)
+        {
+            Hide_Panel();
+            //ItemShop_Panel.Show();
+        }
+        private void TOPUPButton_Click(object sender, EventArgs e)
+        {
+            Hide_Panel();
+            TopUpCenter_Panel.AutoScroll = true;
+            TopUpCenter_Panel.Show();
         }
         private void SettingButton_Click(object sender, EventArgs e)
         {
@@ -102,6 +184,11 @@ namespace GameLauncher
         }
 
         private void guna2GradientButton2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
 
         }

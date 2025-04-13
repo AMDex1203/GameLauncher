@@ -121,6 +121,7 @@
             this.LoginButton.Text = "LOGIN";
             this.LoginButton.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            this.LoginButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputPassword_KeyPress);
             // 
             // CloseButton
             // 
