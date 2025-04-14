@@ -33,5 +33,14 @@ namespace GameLauncher.Strings
         string STR_ID_OR_PASS { get; set; }
         string STR_WRONG_ID_OR_PASS { get; set; }
         string STR_UPDATE_FIRST { get; set; }
+        string STR_DATA_MUST_FILL { get; set; }
+        string STR_ID_OR_PASS_LESS_4_WORD { get; set; }
+        string STR_PASS_LESS_4_WORD { get; set; }
+        string STR_EMAIL_INSERT { get; set; }
+        string STR_REGISTER_PASS_NOT_SAME { get; set; }
+        string STR_HUMAN_VERIFICATION { get; set; }
+        string STR_USERNAME_ALREADY_EXIST { get; set; }
+        string STR_EMAIL_ALREADY_EXIST { get; set; }
+        string STR_REGISTER_SUCCESS { get; set; }
     }
 }

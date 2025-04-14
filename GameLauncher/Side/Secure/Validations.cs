@@ -14,7 +14,7 @@ namespace GameLauncher.Side.Secure
 {
     public class Validations
     {
-        private async Task<string> GetHashedPassword(string password)
+        public static async Task<string> GetHashedPassword(string password)
         {
             using (var client = new HttpClient())
             {
@@ -30,9 +30,9 @@ namespace GameLauncher.Side.Secure
                 using (NpgsqlConnection conn = new NpgsqlConnection(Database.HostDatabase.DatabaseConfig))
                 {
                     conn.Open();
-                    string query = "SELECT password FROM accounts WHERE login = @login";
+                    string query = "SELECT password FROM accounts_data WHERE username = @username";
                     NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@login", login);
+                    cmd.Parameters.AddWithValue("@username", login);
 
                     string storedHashedPassword = (string)cmd.ExecuteScalar();
                     return storedHashedPassword == hashedPassword;
@@ -81,6 +81,27 @@ namespace GameLauncher.Side.Secure
                 return false;
             }
             return false;
+        }
+        public static async Task UpdateLastLogin(string username)
+        {
+            try
+            {
+                string query = "UPDATE accounts_data SET last_login = @last_login WHERE username = @username";
+                using (NpgsqlConnection conn = new NpgsqlConnection(Database.HostDatabase.DatabaseConfig))
+                {
+                    conn.Open();
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@last_login", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                        cmd.Parameters.AddWithValue("@username", username);
+                        await cmd.ExecuteNonQueryAsync();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log("Kesalahan update last login: " + ex.Message);
+            }
         }
     }
 }

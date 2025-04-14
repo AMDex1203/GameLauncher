@@ -285,7 +285,7 @@
             this.InputUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("InputUsername.IconLeft")));
             this.InputUsername.Location = new System.Drawing.Point(26, 221);
             this.InputUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.InputUsername.MaxLength = 12;
+            this.InputUsername.MaxLength = 16;
             this.InputUsername.Name = "InputUsername";
             this.InputUsername.PlaceholderForeColor = System.Drawing.Color.White;
             this.InputUsername.PlaceholderText = "Username";
@@ -314,7 +314,7 @@
             this.InputPassword.IconLeft = global::GameLauncher.Properties.Resources.pass_icon_2;
             this.InputPassword.Location = new System.Drawing.Point(26, 279);
             this.InputPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.InputPassword.MaxLength = 12;
+            this.InputPassword.MaxLength = 16;
             this.InputPassword.Name = "InputPassword";
             this.InputPassword.PasswordChar = '●';
             this.InputPassword.PlaceholderForeColor = System.Drawing.Color.White;
@@ -434,7 +434,7 @@
             this.Enter_HumanCode.IconLeft = global::GameLauncher.Properties.Resources.bot_icon;
             this.Enter_HumanCode.Location = new System.Drawing.Point(26, 312);
             this.Enter_HumanCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Enter_HumanCode.MaxLength = 12;
+            this.Enter_HumanCode.MaxLength = 10;
             this.Enter_HumanCode.Name = "Enter_HumanCode";
             this.Enter_HumanCode.PlaceholderForeColor = System.Drawing.Color.White;
             this.Enter_HumanCode.PlaceholderText = "Insert Human Code";
@@ -462,7 +462,7 @@
             this.Enter_SecretHint.IconLeft = global::GameLauncher.Properties.Resources.hint_icon;
             this.Enter_SecretHint.Location = new System.Drawing.Point(26, 244);
             this.Enter_SecretHint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Enter_SecretHint.MaxLength = 12;
+            this.Enter_SecretHint.MaxLength = 16;
             this.Enter_SecretHint.Name = "Enter_SecretHint";
             this.Enter_SecretHint.PlaceholderForeColor = System.Drawing.Color.White;
             this.Enter_SecretHint.PlaceholderText = "Secret Hint";
@@ -490,7 +490,7 @@
             this.ReEnterPass.IconLeft = global::GameLauncher.Properties.Resources.pass_icon_2;
             this.ReEnterPass.Location = new System.Drawing.Point(26, 143);
             this.ReEnterPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ReEnterPass.MaxLength = 12;
+            this.ReEnterPass.MaxLength = 16;
             this.ReEnterPass.Name = "ReEnterPass";
             this.ReEnterPass.PlaceholderForeColor = System.Drawing.Color.White;
             this.ReEnterPass.PlaceholderText = "Re Enter Password";
@@ -519,7 +519,7 @@
             this.RegisterPass.IconLeft = global::GameLauncher.Properties.Resources.pass_icon_2;
             this.RegisterPass.Location = new System.Drawing.Point(26, 100);
             this.RegisterPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RegisterPass.MaxLength = 12;
+            this.RegisterPass.MaxLength = 16;
             this.RegisterPass.Name = "RegisterPass";
             this.RegisterPass.PlaceholderForeColor = System.Drawing.Color.White;
             this.RegisterPass.PlaceholderText = "Password";
@@ -548,7 +548,7 @@
             this.Enter_Email.IconLeft = global::GameLauncher.Properties.Resources.email_icon;
             this.Enter_Email.Location = new System.Drawing.Point(26, 201);
             this.Enter_Email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Enter_Email.MaxLength = 50;
+            this.Enter_Email.MaxLength = 16;
             this.Enter_Email.Name = "Enter_Email";
             this.Enter_Email.PlaceholderForeColor = System.Drawing.Color.White;
             this.Enter_Email.PlaceholderText = "Email";
@@ -576,7 +576,7 @@
             this.RegisterUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("RegisterUsername.IconLeft")));
             this.RegisterUsername.Location = new System.Drawing.Point(26, 57);
             this.RegisterUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RegisterUsername.MaxLength = 12;
+            this.RegisterUsername.MaxLength = 16;
             this.RegisterUsername.Name = "RegisterUsername";
             this.RegisterUsername.PlaceholderForeColor = System.Drawing.Color.White;
             this.RegisterUsername.PlaceholderText = "Username";

@@ -22,14 +22,19 @@ namespace GameLauncher
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            string filePath = "Language.set";
+            string settingFolder = "setting";
+            if (!Directory.Exists(settingFolder))
+            {
+                Directory.CreateDirectory(settingFolder);
+            }
+
+            string filePath = Path.Combine(settingFolder, "Language.set");
             string password = "your_password"; // Ganti dengan password yang Anda inginkan
 
             if (File.Exists(filePath))
             {
                 string encryptedText = File.ReadAllText(filePath).Trim();
                 string decryptedText = ChipperEncryption.Decrypt(encryptedText, password);
-
                 if (decryptedText == "language=id")
                 {
                     InternalLauncher.InternalSTRING = new IndonesiaString();

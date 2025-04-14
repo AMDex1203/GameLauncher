@@ -1,5 +1,6 @@
 ﻿using GameLauncher.Side.Data;
 using GameLauncher.Side.Host;
+using GameLauncher.Side.Log;
 using GameLauncher.Side.Secure;
 using Npgsql;
 using System;
@@ -89,7 +90,7 @@ namespace GameLauncher
                 }
             }
         }
-        private void RegisterButton_Click(object sender, EventArgs e)
+        private async void RegisterButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -107,39 +108,45 @@ namespace GameLauncher
                 string lastip = GetPublicIpAddress.GetPublicIpv4();
                 string lasthwid = GetInfoClient.GetHwid();
 
+                string encrypt_password = await Validations.GetHashedPassword(password);
+
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(reEnterPassword))
                 {
-                    MessageBox.Show("Semua Data harus diisi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(InternalLauncher.InternalSTRING.STR_DATA_MUST_FILL, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (username.Length < 4 || username.Length > 16)
                 {
-                    MessageBox.Show("Username harus minimal 4 karakter dan maksimal 16 karakter!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(InternalLauncher.InternalSTRING.STR_ID_OR_PASS_LESS_4_WORD, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (password.Length < 4 || password.Length > 16)
                 {
-                    MessageBox.Show("Password harus minimal 4 karakter dan maksimal 16 karakter!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(InternalLauncher.InternalSTRING.STR_PASS_LESS_4_WORD, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (!email.Contains("@gmail.com") && !email.Contains("@yahoo.com"))
                 {
-                    MessageBox.Show("Email harus berupa @gmail.com atau @yahoo.com!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(InternalLauncher.InternalSTRING.STR_EMAIL_INSERT, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Enter_Email.Text = string.Empty;
                     return;
                 }
 
                 if (password != reEnterPassword)
                 {
-                    MessageBox.Show("Password & Re Password tidak Sesuai!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(InternalLauncher.InternalSTRING.STR_REGISTER_PASS_NOT_SAME, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    RegisterPass.Text = string.Empty;
+                    ReEnterPass.Text = string.Empty;
                     return;
                 }
 
                 if (verif_human != code_verif_human)
                 {
-                    MessageBox.Show("Human Code Tidak Valid, Silahkan Isi Secara Tepat !!");
+                    MessageBox.Show(InternalLauncher.InternalSTRING.STR_HUMAN_VERIFICATION);
+                    Enter_HumanCode.Text = string.Empty;
                     RandomCodeNumber();
                     return;
                 }
@@ -160,13 +167,15 @@ namespace GameLauncher
 
                         if (reader.Read())
                         {
-                            if (reader["login"].ToString() == username)
+                            if (reader["username"].ToString() == username)
                             {
-                                MessageBox.Show("Username Telah Digunakan Oleh Pengguna Lain!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(InternalLauncher.InternalSTRING.STR_USERNAME_ALREADY_EXIST, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                RegisterUsername.Text = string.Empty;
                             }
                             else if (reader["email"].ToString() == email)
                             {
-                                MessageBox.Show("Email Telah Digunakan Oleh Pengguna Lain!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(InternalLauncher.InternalSTRING.STR_EMAIL_ALREADY_EXIST, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Enter_Email.Text = string.Empty;
                             }
                             return;
                         }
@@ -183,7 +192,7 @@ namespace GameLauncher
                     using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@username", username);
-                        command.Parameters.AddWithValue("@password", password);
+                        command.Parameters.AddWithValue("@password", encrypt_password);
                         command.Parameters.AddWithValue("@last_ip", lastip);
                         command.Parameters.AddWithValue("@last_register", last_register);
                         command.Parameters.AddWithValue("@email", email);
@@ -194,7 +203,14 @@ namespace GameLauncher
                     }
                 }
 
-                MessageBox.Show("Register Berhasil", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(InternalLauncher.InternalSTRING.STR_REGISTER_SUCCESS);
+                RegisterUsername.Text = string.Empty;
+                RegisterPass.Text = string.Empty;
+                ReEnterPass.Text = string.Empty;
+                Enter_Email.Text = string.Empty;
+                Enter_HumanCode.Text = string.Empty;
+                Enter_SecretHint.Text = string.Empty;
+
                 RandomCodeNumber();
             }
             catch (Exception ex)
@@ -223,19 +239,21 @@ namespace GameLauncher
 
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private async void LoginButton_Click(object sender, EventArgs e)
         {
             try
             {
                 string username = InputUsername.Text;
                 string password = InputPassword.Text;
+                string hashedPassword = await Validations.GetHashedPassword(password);
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
                     MessageBox.Show(InternalLauncher.InternalSTRING.STR_ID_OR_PASS, Connections.ProgramNAME, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Logger.Log("Password " + hashedPassword);
                     return;
                 }
-                if (Validations.ValidasiLoginV3(username, password))
+                if (Validations.ValidasiLoginV1(username, hashedPassword))
                 {
                     if (ProgramVersion != Connections.LauncherVersion)
                     {
@@ -244,20 +262,23 @@ namespace GameLauncher
                     }
                     else
                     {
+                        await Validations.UpdateLastLogin(username);
+
                         VerificationForm verificationForm = new VerificationForm();
                         verificationForm.Show();
                         this.Hide();
                     }
-                        
                 }
                 else
                 {
                     MessageBox.Show(InternalLauncher.InternalSTRING.STR_WRONG_ID_OR_PASS, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Logger.Log("Login Failed : " + username + "| " + hashedPassword);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Kesalahan: " + ex);
+                //Logger.Log("Login Error : " + ex.Message);
             }
         }
 

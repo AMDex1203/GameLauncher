@@ -31,34 +31,43 @@ namespace GameLauncher
             MinimizeStatus.Text = InternalLauncher.InternalSTRING.STR_MINIMIZE_CHECK;
         }
         string password = "your_password"; // Ganti dengan password yang Anda inginkan
+
+        private string GetLanguageFilePath()
+        {
+            string settingFolder = "setting";
+            if (!Directory.Exists(settingFolder))
+            {
+                Directory.CreateDirectory(settingFolder);
+            }
+            return Path.Combine(settingFolder, Connections.StringLanguageFileName);
+        }
         private void GetLanguageSetting()
         {
-            if (File.Exists(Connections.StringLanguageFileName))
+            string filePath = GetLanguageFilePath();
+            if (File.Exists(filePath))
             {
-                string encryptedText = File.ReadAllText(Connections.StringLanguageFileName).Trim();
+                string encryptedText = File.ReadAllText(filePath).Trim();
                 string decryptedText = Encryptions.ChipperEncryption.Decrypt(encryptedText, password);
-
                 if (LanguageSelect.SelectedIndex == 0)
                 {
                     string encryptedEnText = Encryptions.ChipperEncryption.Encrypt("language=en", password);
-                    File.WriteAllText(Connections.StringLanguageFileName, encryptedEnText);
+                    File.WriteAllText(filePath, encryptedEnText);
                 }
                 else if (LanguageSelect.SelectedIndex == 1)
                 {
                     string encryptedIdText = Encryptions.ChipperEncryption.Encrypt("language=id", password);
-                    File.WriteAllText(Connections.StringLanguageFileName, encryptedIdText);
+                    File.WriteAllText(filePath, encryptedIdText);
                 }
             }
         }
         private void AutoSetLanguage()
         {
             string password = "your_password"; // Ganti dengan password yang Anda inginkan
-
-            if (File.Exists(Connections.StringLanguageFileName))
+            string filePath = GetLanguageFilePath();
+            if (File.Exists(filePath))
             {
-                string encryptedText = File.ReadAllText(Connections.StringLanguageFileName).Trim();
+                string encryptedText = File.ReadAllText(filePath).Trim();
                 string decryptedText = Encryptions.ChipperEncryption.Decrypt(encryptedText, password);
-
                 if (decryptedText == "language=id")
                 {
                     LanguageSelect.SelectedIndex = 1; // Bahasa Indonesia
@@ -70,8 +79,9 @@ namespace GameLauncher
             }
             else
             {
-                string encryptedText = Encryptions.ChipperEncryption.Decrypt("language=id", password);
-                File.WriteAllText(Connections.StringLanguageFileName, encryptedText);
+                string encryptedText = Encryptions.ChipperEncryption.Encrypt("language=id", password);
+                File.WriteAllText(filePath, encryptedText);
+                LanguageSelect.SelectedIndex = 1; // Bahasa Indonesia
             }
         }
         private void GetStringInfoVersion()

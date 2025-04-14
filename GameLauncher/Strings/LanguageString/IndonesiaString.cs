@@ -41,5 +41,21 @@ namespace GameLauncher.Strings.LanguageString
         public string STR_ID_OR_PASS { get; set; } = "Username atau Password Tidak Boleh Kosong";
         public string STR_WRONG_ID_OR_PASS { get; set; } = "Username atau Password Salah";
         public string STR_UPDATE_FIRST { get; set; } = "Silahkan Update Terlebih Dahulu";
+
+        //=============== End String Login =============
+
+        //=============== String Register Form =============
+
+        public string STR_DATA_MUST_FILL { get; set; } = "Semua Data Harus Diisi!";
+        public string STR_ID_OR_PASS_LESS_4_WORD { get; set; } = "Username atau Password Harus Minimal 4 Karakter";
+        public string STR_PASS_LESS_4_WORD { get; set; } = "Password harus minimal 4 karakter dan maksimal 16 karakter!";
+        public string STR_EMAIL_INSERT { get; set; } = "Email harus berupa @gmail.com atau @yahoo.com!";
+        public string STR_REGISTER_PASS_NOT_SAME { get; set; } = "Password & Re Password tidak Sesuai!";
+        public string STR_HUMAN_VERIFICATION { get; set; } = "Human Code Tidak Valid, Silahkan Isi Secara Tepat !!";
+        public string STR_USERNAME_ALREADY_EXIST { get; set; } = "Username Telah Digunakan Oleh Pengguna Lain!";
+        public string STR_EMAIL_ALREADY_EXIST { get; set; } = "Email Telah Digunakan Oleh Pengguna Lain!";
+        public string STR_REGISTER_SUCCESS { get; set; } = "Pendaftaran Berhasil!";
+
+        //=============== End String Register =============
     }
 }

@@ -36,11 +36,26 @@ namespace GameLauncher.Strings.LanguageString
 
         //=============== End String Main =============
 
-
         //=============== String Login Form =============
 
         public string STR_ID_OR_PASS { get; set; } = "Username or Password Must Fill";
         public string STR_WRONG_ID_OR_PASS { get; set; } = "Username or Password Wrong";
         public string STR_UPDATE_FIRST { get; set; } = "Please Update First";
+
+        //=============== End String Login =============
+
+        //=============== String Register Form =============
+
+        public string STR_DATA_MUST_FILL { get; set; } = "All Data must be filled!";
+        public string STR_ID_OR_PASS_LESS_4_WORD { get; set; } = "Username or Password must be at least 4 characters";
+        public string STR_PASS_LESS_4_WORD { get; set; } = "Password must be at least 4 characters and a maximum of 16 characters!";
+        public string STR_EMAIL_INSERT { get; set; } = "Email must be @gmail.com or @yahoo.com!";
+        public string STR_REGISTER_PASS_NOT_SAME { get; set; } = "Password & Re Password not Same!";
+        public string STR_HUMAN_VERIFICATION { get; set; } = "Human Code is not valid, please fill it in correctly !!";
+        public string STR_USERNAME_ALREADY_EXIST { get; set; } = "Username has been used by other users!";
+        public string STR_EMAIL_ALREADY_EXIST { get; set; } = "Email has been used by other users!";
+        public string STR_REGISTER_SUCCESS { get; set; } = "Register Success!";
+
+        //=============== End String Register =============
     }
 }
