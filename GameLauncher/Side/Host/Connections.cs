@@ -14,6 +14,7 @@ namespace GameLauncher.Side.Host
     {
         private static readonly string HostUTAMA = "http://localhost/new_launcher/config_launcher.base";
         public static string HashDecoderHost = "http://localhost/new_launcher/hash_encoder.php";
+        public static string GamePanel1Client = "http://143.198.215.231/files/PBID/";
         public static string ProgramNAME = "Spinnet+";
         public static string StringLanguageFileName = "Language.set";
 
