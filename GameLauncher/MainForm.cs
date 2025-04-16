@@ -1,5 +1,7 @@
-﻿using GameLauncher.Side.Host;
+﻿using GameLauncher.Side.Data;
+using GameLauncher.Side.Host;
 using GameLauncher.Side.Log;
+using GameLauncher.Side.Secure;
 using Guna.UI2.WinForms;
 using Npgsql;
 using System;
@@ -16,7 +18,9 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls.WebParts;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GameLauncher
 {
@@ -186,7 +190,7 @@ namespace GameLauncher
             {
                 await DownloadFileAsync(url, extractPath);
                 await ExtractFileAsync(extractPath);
-                //MessageBox.Show("Download dan ekstraksi selesai!");
+                MessageBox.Show("Download dan ekstraksi selesai!");
                 RunGameP1_Click.Show();
             }
             catch (Exception ex)
@@ -351,6 +355,57 @@ namespace GameLauncher
             if (File.Exists(zipFilePath))
             {
                 File.Delete(zipFilePath);
+            }
+        }
+        private void Button_RunGameP1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string encryptedData = File.ReadAllText("Secret.dll");
+                string decryptedData = Encryptions.ChipperEncryption.Decrypt(encryptedData, "amdex2025");
+                string username = decryptedData.Split(':')[0];
+
+                string pbFolderPath = @"C:\Spinnet+\Games\PBID";
+                string pbExePath = Path.Combine(pbFolderPath, "PointBlank.exe");
+                if (File.Exists(pbExePath))
+                {
+                    string connectionString = Database.HostDatabase.DatabaseGamePanel1;
+                    string query = "UPDATE accounts SET hwid = @hwid, token = @token WHERE login = @login";
+                    string token = Guid.NewGuid().ToString();
+                    using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@hwid", GetInfoClient.GetHwid());
+                            command.Parameters.AddWithValue("@token", token);
+                            command.Parameters.AddWithValue("@login", username);
+                            command.ExecuteNonQuery();
+                        }
+                    }
+
+                    this.WindowState = FormWindowState.Minimized;
+                    Process.Start(@"C:\Spinnet+\Games\PBID\", "PointBlank.Exe");
+                }
+                else
+                {
+                    MessageBox.Show("PointBlank.exe Tidak Ditemukan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("padding is invalid"))
+                {
+                    MessageBox.Show("Gagal mendekripsi data login. Pastikan kunci dekripsi benar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (ex.Message.Contains("file not found"))
+                {
+                    MessageBox.Show("File Secret.dll tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void HomeButton_Click(Object sender, EventArgs e)

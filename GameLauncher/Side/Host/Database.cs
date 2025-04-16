@@ -11,6 +11,7 @@ namespace GameLauncher.Side.Host
         public static class HostDatabase
         {
             public static string DatabaseConfig = "Host=localhost;Database=postgres;Username=postgres;Password=spacegrid2025;";
+            public static string DatabaseGamePanel1 = "Host=localhost;Database=officialdb;Username=postgres;Password=spacegrid2025;";
         }
     }
 }

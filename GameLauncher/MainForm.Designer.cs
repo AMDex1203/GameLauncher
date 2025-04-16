@@ -51,7 +51,6 @@
             this.RunGameP2_Click = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Game_Panel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.STR_TOTALSIZE_GP1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.STR_Pencent_GP1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.STR_DOWNLOAD_CP1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.DownloadBarP1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.STR_COUNT_ONLINE_USERP1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -63,6 +62,7 @@
             this.RunGameP1_Click = new Guna.UI2.WinForms.Guna2GradientButton();
             this.InstallGameP1_Click = new Guna.UI2.WinForms.Guna2GradientButton();
             this.UpdateGameP1_Click = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.STR_Pencent_GP1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ImageChanger = new System.Windows.Forms.Timer(this.components);
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -376,19 +376,6 @@
             this.STR_TOTALSIZE_GP1.Text = "TotalSize";
             this.STR_TOTALSIZE_GP1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // STR_Pencent_GP1
-            // 
-            this.STR_Pencent_GP1.AutoSize = false;
-            this.STR_Pencent_GP1.BackColor = System.Drawing.Color.Transparent;
-            this.STR_Pencent_GP1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STR_Pencent_GP1.ForeColor = System.Drawing.Color.White;
-            this.STR_Pencent_GP1.Location = new System.Drawing.Point(228, 408);
-            this.STR_Pencent_GP1.Name = "STR_Pencent_GP1";
-            this.STR_Pencent_GP1.Size = new System.Drawing.Size(89, 26);
-            this.STR_Pencent_GP1.TabIndex = 16;
-            this.STR_Pencent_GP1.Text = "Percentage";
-            this.STR_Pencent_GP1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // STR_DOWNLOAD_CP1
             // 
             this.STR_DOWNLOAD_CP1.AutoSize = false;
@@ -518,6 +505,7 @@
             this.RunGameP1_Click.Size = new System.Drawing.Size(129, 45);
             this.RunGameP1_Click.TabIndex = 3;
             this.RunGameP1_Click.Text = "RUN GAME";
+            this.RunGameP1_Click.Click += new System.EventHandler(this.Button_RunGameP1_Click);
             // 
             // InstallGameP1_Click
             // 
@@ -563,6 +551,19 @@
             this.UpdateGameP1_Click.Size = new System.Drawing.Size(129, 45);
             this.UpdateGameP1_Click.TabIndex = 4;
             this.UpdateGameP1_Click.Text = "UPDATE";
+            // 
+            // STR_Pencent_GP1
+            // 
+            this.STR_Pencent_GP1.AutoSize = false;
+            this.STR_Pencent_GP1.BackColor = System.Drawing.Color.Transparent;
+            this.STR_Pencent_GP1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STR_Pencent_GP1.ForeColor = System.Drawing.Color.White;
+            this.STR_Pencent_GP1.Location = new System.Drawing.Point(228, 408);
+            this.STR_Pencent_GP1.Name = "STR_Pencent_GP1";
+            this.STR_Pencent_GP1.Size = new System.Drawing.Size(89, 26);
+            this.STR_Pencent_GP1.TabIndex = 16;
+            this.STR_Pencent_GP1.Text = "Percentage";
+            this.STR_Pencent_GP1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ImageChanger
             // 

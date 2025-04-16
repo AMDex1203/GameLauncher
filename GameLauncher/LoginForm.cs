@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Management.Instrumentation;
 using System.Reflection;
@@ -181,14 +182,11 @@ namespace GameLauncher
                         }
                     }
                 }
-
-                // Save To Database
+                // Save To Database accounts_data
                 query = "INSERT INTO accounts_data (username, password, last_register, last_ip, email, last_hwid, secret_hint) VALUES (@username, @password, @last_register, @last_ip, @email, @last_hwid, @secret_hint)";
-
                 using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
                 {
                     connection.Open();
-
                     using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@username", username);
@@ -198,8 +196,24 @@ namespace GameLauncher
                         command.Parameters.AddWithValue("@email", email);
                         command.Parameters.AddWithValue("@last_hwid", lasthwid);
                         command.Parameters.AddWithValue("@secret_hint", secret_hint);
-
                         command.ExecuteNonQuery();
+                    }
+                }
+
+                // Save To Database accounts
+                string accountsConnectionString = Database.HostDatabase.DatabaseGamePanel1;
+                query = "INSERT INTO accounts (login, password, lastip, email, hwid) VALUES (@login, @password, @lastip, @email)";
+                using (NpgsqlConnection accountsConnection = new NpgsqlConnection(accountsConnectionString))
+                {
+                    accountsConnection.Open();
+                    using (NpgsqlCommand accountsCommand = new NpgsqlCommand(query, accountsConnection))
+                    {
+                        accountsCommand.Parameters.AddWithValue("@login", username);
+                        accountsCommand.Parameters.AddWithValue("@password", encrypt_password);
+                        accountsCommand.Parameters.AddWithValue("@lastip", lastip);
+                        accountsCommand.Parameters.AddWithValue("@email", email);
+                        accountsCommand.Parameters.AddWithValue("@hwid", lasthwid);
+                        accountsCommand.ExecuteNonQuery();
                     }
                 }
 
@@ -238,7 +252,6 @@ namespace GameLauncher
         {
 
         }
-
         private async void LoginButton_Click(object sender, EventArgs e)
         {
             try
@@ -263,6 +276,10 @@ namespace GameLauncher
                     else
                     {
                         await Validations.UpdateLastLogin(username);
+
+                        // Simpan username dan password dalam file Secret.dll dengan enkripsi
+                        string encryptedData = Encryptions.ChipperEncryption.Encrypt(username + ":" + hashedPassword, "amdex2025");
+                        File.WriteAllText("Secret.dll", encryptedData);
 
                         VerificationForm verificationForm = new VerificationForm();
                         verificationForm.Show();
